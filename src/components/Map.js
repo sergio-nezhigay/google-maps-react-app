@@ -1,5 +1,5 @@
 /*global google*/
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   GoogleMap,
   DirectionsRenderer,
@@ -7,8 +7,8 @@ import {
   InfoWindowF,
 } from "@react-google-maps/api";
 
-import rawPlaces from "../convertcsv.json";
-const places = [];
+import useInitMarkers from "../utils/useInitMarkers";
+import geocodeFromString from "../utils/geocodeFromString";
 
 const defaultLocation = { lat: 50.4501, lng: 30.5234 };
 let origin = { lat: 50.4501, lng: 30.5234 };
@@ -22,20 +22,8 @@ const Map = () => {
   });
   const [directions, setDirections] = useState(null);
   const [selectedMarker, setSelectedMarker] = useState(null);
-  const [markers, setMarkers] = useState([]);
-
-  useEffect(() => {
-    rawPlaces.forEach((item, index) => {
-      if (+item?.AB > 20) {
-        places.push({
-          id: index,
-          position: { lat: +item.AB, lng: +item.AC },
-          info: item.C,
-        });
-      }
-    });
-    setMarkers(places);
-  }, []);
+  const [destinationInput, setDestinationInput] = useState(""); // Додана стейт-змінна для збереження введеного тексту
+  const markers = useInitMarkers();
 
   const onMapLoad = () => {
     directionsService = new window.google.maps.DirectionsService();
@@ -62,8 +50,23 @@ const Map = () => {
   const onMapClick = (e) => {
     const newDestination = { lat: e.latLng.lat(), lng: e.latLng.lng() };
     setDestination(newDestination);
+    setDestinationInput("");
     changeDirection(directionsService, origin, newDestination);
     setSelectedMarker(null);
+  };
+
+  const handleDestinationInputChange = (event) => {
+    setDestinationInput(event.target.value);
+  };
+
+  const handleDestinationSubmit = () => {
+    const newDestination = geocodeFromString(destinationInput);
+
+    if (newDestination) {
+      setDestination(newDestination);
+      changeDirection(directionsService, origin, newDestination);
+      setSelectedMarker(null);
+    }
   };
 
   const openInfoWindow = (marker) => {
@@ -76,6 +79,14 @@ const Map = () => {
 
   return (
     <div>
+      <input
+        type="text"
+        placeholder="Введіть місце призначення"
+        value={destinationInput}
+        onChange={handleDestinationInputChange}
+      />
+      <button onClick={handleDestinationSubmit}>Підтвердити</button>
+
       <GoogleMap
         center={defaultLocation}
         zoom={12}
