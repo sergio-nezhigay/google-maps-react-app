@@ -1,9 +1,15 @@
 /*global google*/
 import React, { useState, useEffect } from "react";
-import { GoogleMap, DirectionsRenderer, Marker } from "@react-google-maps/api";
+import {
+  GoogleMap,
+  DirectionsRenderer,
+  MarkerF,
+  InfoWindowF,
+} from "@react-google-maps/api";
 
 const defaultLocation = { lat: 50.4501, lng: 30.5234 };
 let origin = { lat: 50.4501, lng: 30.5234 };
+let ANOTHERMARKER = { lat: 50.4601, lng: 30.5634 };
 let directionsService;
 
 const Map = () => {
@@ -51,7 +57,10 @@ const Map = () => {
         onClick={onMapClick}
       >
         {directions !== null && <DirectionsRenderer directions={directions} />}
-        <Marker position={destination} />
+        <MarkerF position={{ lat: 50.4785672, lng: 30.4352165 }} />
+        <InfoWindowF position={{ lat: 50.4285672, lng: 30.4252165 }}>
+          <p>My info</p>
+        </InfoWindowF>
       </GoogleMap>
     </div>
   );
