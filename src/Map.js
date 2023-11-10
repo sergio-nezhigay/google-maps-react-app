@@ -1,5 +1,5 @@
 /*global google*/
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   GoogleMap,
   DirectionsRenderer,
@@ -9,7 +9,7 @@ import {
 
 const defaultLocation = { lat: 50.4501, lng: 30.5234 };
 let origin = { lat: 50.4501, lng: 30.5234 };
-let ANOTHERMARKER = { lat: 50.4601, lng: 30.5634 };
+
 let directionsService;
 
 const Map = () => {
@@ -18,9 +18,28 @@ const Map = () => {
     lng: 30.4989,
   });
   const [directions, setDirections] = useState(null);
+  const [selectedMarker, setSelectedMarker] = useState(null);
+
+  const markersArray = [
+    {
+      id: "mark1",
+      position: { lat: 50.4785672, lng: 30.4352165 },
+      info: "Info for Marker 1",
+    },
+    {
+      id: "mark2",
+      position: { lat: 50.4885672, lng: 30.4452165 },
+      info: "Info for Marker 2",
+    },
+    {
+      id: "mark",
+      position: { lat: 50.4985672, lng: 30.4552165 },
+      info: "another",
+    },
+  ];
 
   const onMapLoad = (map) => {
-    directionsService = new google.maps.DirectionsService();
+    directionsService = new window.google.maps.DirectionsService();
     changeDirection(directionsService, origin, destination);
   };
 
@@ -29,13 +48,13 @@ const Map = () => {
       {
         origin: origin,
         destination: destination,
-        travelMode: google.maps.TravelMode.DRIVING,
+        travelMode: window.google.maps.TravelMode.DRIVING,
       },
       (result, status) => {
-        if (status === google.maps.DirectionsStatus.OK) {
+        if (status === window.google.maps.DirectionsStatus.OK) {
           setDirections(result);
         } else {
-          console.error(`error fetching directions ${result}`);
+          console.error(`Error fetching directions ${result}`);
         }
       }
     );
@@ -45,22 +64,44 @@ const Map = () => {
     const newDestination = { lat: e.latLng.lat(), lng: e.latLng.lng() };
     setDestination(newDestination);
     changeDirection(directionsService, origin, newDestination);
+    setSelectedMarker(null);
+  };
+
+  const openInfoWindow = (marker) => {
+    setSelectedMarker(marker);
+  };
+
+  const closeInfoWindow = () => {
+    setSelectedMarker(null);
   };
 
   return (
     <div>
       <GoogleMap
         center={defaultLocation}
-        zoom={7}
+        zoom={12}
         onLoad={(map) => onMapLoad(map)}
-        mapContainerStyle={{ height: "400px", width: "800px" }}
+        mapContainerStyle={{ height: "500px", width: "900px" }}
         onClick={onMapClick}
       >
         {directions !== null && <DirectionsRenderer directions={directions} />}
-        <MarkerF position={{ lat: 50.4785672, lng: 30.4352165 }} />
-        <InfoWindowF position={{ lat: 50.4285672, lng: 30.4252165 }}>
-          <p>My info</p>
-        </InfoWindowF>
+
+        {markersArray.map((marker, index) => (
+          <MarkerF
+            key={index}
+            onClick={() => openInfoWindow(marker)}
+            position={marker.position}
+          >
+            {selectedMarker?.id === marker?.id && (
+              <InfoWindowF
+                position={marker.position}
+                onCloseClick={closeInfoWindow}
+              >
+                <p>{marker.info}</p>
+              </InfoWindowF>
+            )}
+          </MarkerF>
+        ))}
       </GoogleMap>
     </div>
   );
