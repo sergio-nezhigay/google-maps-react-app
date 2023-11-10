@@ -1,119 +1,111 @@
 {
   "geoobject": [
-    {   "id":1,
-        "name": "Сільпо",
-        "coordinates": {
-          "latitude": "50.4621138",
-          "longitude": "30.4941865"
-        },
-        "type": {
-          "name": "DEPARTMENT_STORE",
-          "label": "Супермаркет"
-        },
-        "address": "Київ, вул. Глибочицька, 32Б",
-        "schedule": "08:00-22:30",
-        "accessibility": [
-          {
-            "name": "RAMP",
-            "label": "Пандус"
-          }
-        ],
-        "source": "Сільпо"
+    {
+      "id": 1,
+      "name": "Сільпо2",
+      "coordinates": {
+        "latitude": "50.4621138",
+        "longitude": "30.4941865"
       },
-      { "id":2,
-        "name": "Кавовий острів PapaKiry",
-        "coordinates": {
-          "latitude": "50.4618248",
-          "longitude": "30.4995932"
-        },
-        "type": {
-          "name": "CATERING",
-          "label": "Харчування"
-        },
-        "address": "Глибочицька, 44, БЦ \"Глибочицький\", магазин \"Ультрамаркет\"",
-        "schedule": "8:30 до 21:00",
-        "description": "Безкоштовно кава чай та смаколики",
-        "accessibility": [
-          {
-            "name": "RAMP",
-            "label": "Пандус"
-          },
-          {
-            "name": "ELEVATOR",
-            "label": "Ліфт"
-          },
-          {
-            "name": "SPECIAL_WC",
-            "label": "Вбиральня для людей з інвалідністю"
-          },
-          {
-            "name": "SPECIAL_PARKING",
-            "label": "Парковка для людей з інвалідністю"
-          }
-        ]
+      "type": {
+        "name": "DEPARTMENT_STORE",
+        "label": "Супермаркет"
       },
-      { 
-        "id":3,
-        "name": "Світлофор",
-        "coordinates": {
-          "latitude": "50.4676163",
-          "longitude": "30.5141981"
-        },
-        "type": {
-          "name": "INFRASTRUCTURE",
-          "label": "Інфраструктура"
-        },
-        "address": "вул. Глибочицька - Вознесенський узвіз - вул. Нижній Вал",
-        "accessibility": [
-          {
-            "name": "TRAFFIC_LIGHT_WITH_SOUND",
-            "label": "Світлофор зі звуковим сигналом"
-          }
-        ],
-        "source": "Департамент транспортної інфраструктури"
+      "address": "Київ, вул. Глибочицька, 32Б",
+      "schedule": "08:00-22:30",
+      "accessibility": [
+        {
+          "name": "RAMP",
+          "label": "Пандус"
+        }
+      ],
+      "source": "Сільпо"
+    },
+    {
+      "id": 2,
+      "name": "Кавовий острів PapaKiry",
+      "coordinates": {
+        "latitude": "50.4618248",
+        "longitude": "30.4995932"
       },
-      {
-        "id":4,
-        "name": "Пиріжкова Тітка Клара",
-        "coordinates": {
-          "latitude": "50.4607925",
-          "longitude": "30.5101445"
-        },
-        "type": {
-          "name": "CATERING",
-          "label": "Харчування"
-        },
-        "address": "Київ, Воздвиженська 22",
-        "schedule": "Пн-Пт: 8:00 - 21:00 Сб-Вс: 8:30 - 21:00",
-        "description": "Встановлені дзвоники для виклику співробітника при вході для людей з інвалідністю",
-        "accessibility": [
-          {
-            "name": "RAMP",
-            "label": "Пандус"
-          }
-        ],
-        "source": "Пиріжкова Тітка Клара"
+      "type": {
+        "name": "CATERING",
+        "label": "Харчування"
       },
-      {
-        "id":5,
-        "name": "Сільпо",
-        "coordinates": {
-          "latitude": "50.4624602",
-          "longitude": "30.5189963"
+      "address": "Глибочицька, 44, БЦ \"Глибочицький\", магазин \"Ультрамаркет\"",
+      "schedule": "8:30 до 21:00",
+      "description": "Безкоштовно кава чай та смаколики",
+      "accessibility": [
+        {
+          "name": "RAMP",
+          "label": "Пандус"
         },
-        "type": {
-          "name": "DEPARTMENT_STORE",
-          "label": "Супермаркет"
+        {
+          "name": "ELEVATOR",
+          "label": "Ліфт"
         },
-        "address": "Київ, вул. Сагайдачного Петра, 41",
-        "schedule": "08:00-23:00",
-        "accessibility": [
-          {
-            "name": "LOW_ENTRY",
-            "label": "Вхід в рівень з тротуаром"
-          }
-        ],
-        "source": "Сільпо,"
-      }
+        {
+          "name": "SPECIAL_WC",
+          "label": "Вбиральня для людей з інвалідністю"
+        },
+        {
+          "name": "SPECIAL_PARKING",
+          "label": "Парковка для людей з інвалідністю"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Світлофор",
+      "coordinates": {
+        "latitude": "50.4676163",
+        "longitude": "30.5141981"
+      },
+      "type": {
+        "name": "INFRASTRUCTURE",
+        "label": "Інфраструктура"
+      },
+      "address": "вул. Глибочицька - Вознесенський узвіз - вул. Нижній Вал",
+      "accessibility": [
+        {
+          "name": "TRAFFIC_LIGHT_WITH_SOUND",
+          "label": "Світлофор зі звуковим сигналом"
+        }
+      ],
+      "source": "Департамент транспортної інфраструктури"
+    },
+    {
+      "name": "Adrian",
+      "description": "afwafa",
+      "type": {
+        "label": "awfawf"
+      },
+      "coordinates": {
+        "latitude": "awfawfa",
+        "longitude": "wafwafawafaw"
+      },
+      "Accessibility": "wafawfa",
+      "source": "awfawfa",
+      "address": "Bathurst",
+      "id": 4
+    },
+    {
+      "name": "Mykola Vladymyrskiy",
+      "description": "afwafa",
+      "type": {
+        "label": "awfawf"
+      },
+      "coordinates": {
+        "latitude": "awfawfa",
+        "longitude": "ewgewgew"
+      },
+      "accessibility": [
+        "ELEVATOR"
+      ],
+      "source": "awfawfa",
+      "address": "Bathurst",
+      "id": 5,
+      "Accessibility": "wafawfa"
+    }
   ]
 }
