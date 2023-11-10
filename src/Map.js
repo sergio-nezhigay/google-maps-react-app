@@ -1,11 +1,28 @@
 /*global google*/
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   GoogleMap,
   DirectionsRenderer,
   MarkerF,
   InfoWindowF,
 } from "@react-google-maps/api";
+
+import convertcsvData from "./convertcsv.json";
+const array = [];
+convertcsvData.forEach((item, index) => {
+  if (index === 1) console.log(`Item ${index + 1}:`, item);
+  if (index < 10) console.log(`Item ${index + 1}:`, item.AB, item.AC, item.C);
+  // Access individual fields like item.AA, item.B, etc.
+  if (+item?.AB > 20) {
+    array.push({
+      id: index,
+      lat: +item.AB,
+      lng: +item.AC,
+      info: +item.C,
+    });
+  }
+});
+console.log(array);
 
 const defaultLocation = { lat: 50.4501, lng: 30.5234 };
 let origin = { lat: 50.4501, lng: 30.5234 };
@@ -38,7 +55,9 @@ const Map = () => {
     },
   ];
 
-  const onMapLoad = (map) => {
+  useEffect(() => {}, []);
+
+  const onMapLoad = () => {
     directionsService = new window.google.maps.DirectionsService();
     changeDirection(directionsService, origin, destination);
   };
