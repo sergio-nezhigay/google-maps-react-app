@@ -8,21 +8,7 @@ import {
 } from "@react-google-maps/api";
 
 import convertcsvData from "./convertcsv.json";
-const array = [];
-convertcsvData.forEach((item, index) => {
-  if (index === 1) console.log(`Item ${index + 1}:`, item);
-  if (index < 10) console.log(`Item ${index + 1}:`, item.AB, item.AC, item.C);
-  // Access individual fields like item.AA, item.B, etc.
-  if (+item?.AB > 20) {
-    array.push({
-      id: index,
-      lat: +item.AB,
-      lng: +item.AC,
-      info: +item.C,
-    });
-  }
-});
-console.log(array);
+const places = [];
 
 const defaultLocation = { lat: 50.4501, lng: 30.5234 };
 let origin = { lat: 50.4501, lng: 30.5234 };
@@ -36,26 +22,23 @@ const Map = () => {
   });
   const [directions, setDirections] = useState(null);
   const [selectedMarker, setSelectedMarker] = useState(null);
+  const [markers, setMarkers] = useState([]);
 
-  const markersArray = [
-    {
-      id: "mark1",
-      position: { lat: 50.4785672, lng: 30.4352165 },
-      info: "Info for Marker 1",
-    },
-    {
-      id: "mark2",
-      position: { lat: 50.4885672, lng: 30.4452165 },
-      info: "Info for Marker 2",
-    },
-    {
-      id: "mark",
-      position: { lat: 50.4985672, lng: 30.4552165 },
-      info: "another",
-    },
-  ];
-
-  useEffect(() => {}, []);
+  useEffect(() => {
+    convertcsvData.forEach((item, index) => {
+      if (index === 1) console.log(`Item ${index + 1}:`, item);
+      if (index < 10)
+        console.log(`Item ${index + 1}:`, item.AB, item.AC, item.C);
+      if (+item?.AB > 20) {
+        places.push({
+          id: index,
+          position: { lat: +item.AB, lng: +item.AC },
+          info: item.C,
+        });
+      }
+    });
+    setMarkers(places);
+  }, []);
 
   const onMapLoad = () => {
     directionsService = new window.google.maps.DirectionsService();
@@ -105,7 +88,7 @@ const Map = () => {
       >
         {directions !== null && <DirectionsRenderer directions={directions} />}
 
-        {markersArray.map((marker, index) => (
+        {markers.map((marker, index) => (
           <MarkerF
             key={index}
             onClick={() => openInfoWindow(marker)}
