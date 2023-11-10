@@ -7,7 +7,7 @@ import {
   InfoWindowF,
 } from "@react-google-maps/api";
 
-import convertcsvData from "./convertcsv.json";
+import rawPlaces from "../convertcsv.json";
 const places = [];
 
 const defaultLocation = { lat: 50.4501, lng: 30.5234 };
@@ -25,10 +25,7 @@ const Map = () => {
   const [markers, setMarkers] = useState([]);
 
   useEffect(() => {
-    convertcsvData.forEach((item, index) => {
-      if (index === 1) console.log(`Item ${index + 1}:`, item);
-      if (index < 10)
-        console.log(`Item ${index + 1}:`, item.AB, item.AC, item.C);
+    rawPlaces.forEach((item, index) => {
       if (+item?.AB > 20) {
         places.push({
           id: index,
