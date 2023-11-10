@@ -14,6 +14,7 @@ const defaultLocation = { lat: 50.4501, lng: 30.5234 };
 let origin = { lat: 50.4501, lng: 30.5234 };
 
 let directionsService;
+let directionsDisplay;
 
 const Map = () => {
   const [destination, setDestination] = useState({
@@ -22,11 +23,11 @@ const Map = () => {
   });
   const [directions, setDirections] = useState(null);
   const [selectedMarker, setSelectedMarker] = useState(null);
-  const [destinationInput, setDestinationInput] = useState(""); // Додана стейт-змінна для збереження введеного тексту
+  const [destinationInput, setDestinationInput] = useState("");
   const markers = useInitMarkers();
+  directionsService = new window.google.maps.DirectionsService();
 
   const onMapLoad = () => {
-    directionsService = new window.google.maps.DirectionsService();
     changeDirection(directionsService, origin, destination);
   };
 
@@ -35,7 +36,7 @@ const Map = () => {
       {
         origin: origin,
         destination: destination,
-        travelMode: window.google.maps.TravelMode.DRIVING,
+        travelMode: window.google.maps.TravelMode.WALKING,
       },
       (result, status) => {
         if (status === window.google.maps.DirectionsStatus.OK) {
@@ -52,7 +53,6 @@ const Map = () => {
     setDestination(newDestination);
     setDestinationInput("");
     changeDirection(directionsService, origin, newDestination);
-    setSelectedMarker(null);
   };
 
   const handleDestinationInputChange = (event) => {
@@ -60,13 +60,11 @@ const Map = () => {
   };
 
   const handleDestinationSubmit = () => {
-    const newDestination = geocodeFromString(destinationInput);
-
-    if (newDestination) {
-      setDestination(newDestination);
-      changeDirection(directionsService, origin, newDestination);
+    geocodeFromString(destinationInput).then((coordinates) => {
+      setDestination(coordinates);
+      changeDirection(directionsService, origin, coordinates);
       setSelectedMarker(null);
-    }
+    });
   };
 
   const openInfoWindow = (marker) => {
@@ -76,7 +74,7 @@ const Map = () => {
   const closeInfoWindow = () => {
     setSelectedMarker(null);
   };
-
+  console.log(directions);
   return (
     <div>
       <input
