@@ -1,13 +1,14 @@
 {
   "files": {
     "main.css": "/google-maps-react-app/static/css/main.bb89c93c.css",
-    "main.js": "/google-maps-react-app/static/js/main.6060491c.js",
+    "main.js": "/google-maps-react-app/static/js/main.497f09df.js",
+    "static/media/pin.ico": "/google-maps-react-app/static/media/pin.08a51cbc1a48f7d98b58.ico",
     "index.html": "/google-maps-react-app/index.html",
     "main.bb89c93c.css.map": "/google-maps-react-app/static/css/main.bb89c93c.css.map",
-    "main.6060491c.js.map": "/google-maps-react-app/static/js/main.6060491c.js.map"
+    "main.497f09df.js.map": "/google-maps-react-app/static/js/main.497f09df.js.map"
   },
   "entrypoints": [
     "static/css/main.bb89c93c.css",
-    "static/js/main.6060491c.js"
+    "static/js/main.497f09df.js"
   ]
 }
