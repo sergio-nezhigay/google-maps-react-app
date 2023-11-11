@@ -10,19 +10,6 @@ export default function Marker({
   closeInfoWindow,
   marker,
 }) {
-  const accessibilityBlock = marker.accessibilities?.length ? (
-    <>
-      <p>
-        <strong>Зручності:</strong>
-      </p>
-      <ul>
-        {marker.accessibilities.map((accessibility, index) => (
-          <li key={index}>{accessibility.label}</li>
-        ))}
-      </ul>
-    </>
-  ) : null;
-
   const icon = {
     url: require("../images/pin4.ico"),
     fillColor: "#EB00FF",
@@ -30,21 +17,51 @@ export default function Marker({
 
   switch (marker.type?.name) {
     case "CATERING":
-      icon.url = require("../images/cafee.ico");
+      icon.url = require("../images/catering.ico");
       break;
     case "INFRASTRUCTURE":
-      icon.url = require("../images/pin2.ico");
+      icon.url = require("../images/infrastructure.ico");
       break;
     case "SHOP":
-      icon.url = require("../images/pin5.ico");
+      icon.url = require("../images/shop.ico");
       break;
     case "PARK":
       icon.url = require("../images/park.ico");
       break;
-    // додайте додаткові випадки для інших типів, якщо потрібно
+    case "BUILDING":
+      icon.url = require("../images/building.ico");
+      break;
+    case "EDUCATION":
+      icon.url = require("../images/education.ico");
+      break;
+    case "FACILITY":
+      icon.url = require("../images/facility.ico");
+      break;
+    case "MEDICINE":
+      icon.url = require("../images/medicine.ico");
+      break;
+    case "TRANSPORT":
+      icon.url = require("../images/transport.ico");
+      break;
+    case "PLAYGROUND":
+      icon.url = require("../images/playground.ico");
+      break;
     default:
       break;
   }
+
+  const accessibilityBlock = marker.accessibilities?.length ? (
+    <>
+      <p>
+        <strong>Зручності:</strong>
+      </p>
+      <ul>
+        {marker.accessibilities.map((accessibility, index) => (
+          <li key={index}>{accessibility.title}</li>
+        ))}
+      </ul>
+    </>
+  ) : null;
 
   return (
     <MarkerF
@@ -61,9 +78,9 @@ export default function Marker({
               {marker.description && (
                 <p className="card-text">{marker.description}</p>
               )}
-              {marker.type?.label && (
+              {marker.type?.title && (
                 <p className="card-text">
-                  <strong>{marker.type.label}</strong>
+                  <strong>{marker.type.title}</strong>
                 </p>
               )}
               {marker.schedule && (
