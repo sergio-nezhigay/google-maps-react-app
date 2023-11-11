@@ -92,13 +92,14 @@ const Map = () => {
       <GoogleMap
         center={defaultLocation}
         zoom={12}
-        mapContainerStyle={{ height: "500px" }}
+        mapContainerStyle={{ height: "600px" }}
         onClick={onMapClick}
       >
         {directions !== null && <DirectionsRenderer directions={directions} />}
 
         {markers.map((marker, index) => (
           <Marker
+            key={index}
             selectedMarker={selectedMarker}
             index={index}
             openInfoWindow={openInfoWindow}

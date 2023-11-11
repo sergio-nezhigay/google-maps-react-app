@@ -20,6 +20,7 @@ export default function useInitMarkers() {
             lng: +item.coordinates.longitude,
           },
           info: item.name,
+          description: item.description,
         });
       }
     });

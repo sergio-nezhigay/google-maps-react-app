@@ -21,7 +21,10 @@ export default function Marker({
     >
       {selectedMarker?.id === marker?.id && (
         <InfoWindowF position={marker.position} onCloseClick={closeInfoWindow}>
-          <p>{marker.info}</p>
+          <>
+            <h4>{marker.info}</h4>
+            {marker.description && <p>{marker.description}</p>}
+          </>
         </InfoWindowF>
       )}
     </MarkerF>
