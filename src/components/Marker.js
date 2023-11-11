@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { MarkerF, InfoWindowF } from "@react-google-maps/api";
+import { Modal, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Marker({
@@ -10,6 +11,8 @@ export default function Marker({
   closeInfoWindow,
   marker,
 }) {
+  const [reportError, setReportError] = useState(false);
+
   const icon = {
     url: require("../images/pin4.ico"),
     fillColor: "#EB00FF",
@@ -63,6 +66,10 @@ export default function Marker({
     </>
   ) : null;
 
+  const handleReportError = () => {
+    setReportError(true);
+  };
+
   return (
     <MarkerF
       key={index}
@@ -72,28 +79,50 @@ export default function Marker({
     >
       {selectedMarker?.id === marker?.id && (
         <InfoWindowF position={marker.position} onCloseClick={closeInfoWindow}>
-          <div className="card" style={{ width: "18rem" }}>
-            <div className="card-body">
-              <h5 className="card-title">{marker.info}</h5>
-              {marker.description && (
-                <p className="card-text">{marker.description}</p>
-              )}
-              {marker.type?.title && (
-                <p className="card-text">
-                  <strong>{marker.type.title}</strong>
-                </p>
-              )}
-              {marker.schedule && (
-                <p className="card-text">
-                  <span>
-                    <strong>Розклад роботи:</strong>{" "}
-                  </span>
-                  {marker.schedule}
-                </p>
-              )}
-              {accessibilityBlock}
+          <>
+            <div className="card" style={{ width: "18rem" }}>
+              <div className="card-body">
+                <h5 className="card-title">{marker.info}</h5>
+                {marker.description && (
+                  <p className="card-text">{marker.description}</p>
+                )}
+                {marker.type?.title && (
+                  <p className="card-text">
+                    <strong>{marker.type.title}</strong>
+                  </p>
+                )}
+                {marker.schedule && (
+                  <p className="card-text">
+                    <span>
+                      <strong>Розклад роботи:</strong>{" "}
+                    </span>
+                    {marker.schedule}
+                  </p>
+                )}
+                {accessibilityBlock}
+                <Button onClick={handleReportError} size="sm">
+                  Повідомити про неточність
+                </Button>
+              </div>
             </div>
-          </div>
+            <Modal show={reportError} onHide={() => setReportError(false)}>
+              <Modal.Header closeButton>
+                <Modal.Title>Повідомлення про неточність</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                <p>Повідомлення про неточність було відправлено.</p>
+              </Modal.Body>
+              <Modal.Footer>
+                <Button
+                  variant="secondary"
+                  size="sm"
+                  onClick={() => setReportError(false)}
+                >
+                  Закрити
+                </Button>
+              </Modal.Footer>
+            </Modal>
+          </>
         </InfoWindowF>
       )}
     </MarkerF>
