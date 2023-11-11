@@ -14,6 +14,10 @@ export default function Marker({
       key={index}
       onClick={() => openInfoWindow(marker)}
       position={marker.position}
+      icon={{
+        url: require("../images/pin.ico"),
+        fillColor: "#EB00FF",
+      }}
     >
       {selectedMarker?.id === marker?.id && (
         <InfoWindowF position={marker.position} onCloseClick={closeInfoWindow}>
