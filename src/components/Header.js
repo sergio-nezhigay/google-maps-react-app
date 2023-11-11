@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header>
+    <header className="mb-3">
       <Navbar bg="light" expand="lg">
         <Container>
           <Navbar.Brand as={NavLink} to="/" style={{ fontSize: "3em" }}>
