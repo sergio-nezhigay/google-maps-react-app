@@ -13,31 +13,18 @@ const App = () => {
     <div>
       <Header />
       <main>
-        <Container>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/admin" element={<Admin />} />
-            <Route path="/login" element={<Login />} />
-          </Routes>
-        </Container>
+        <section>
+          <Container>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/admin" element={<Admin />} />
+              <Route path="/login" element={<Login />} />
+            </Routes>
+          </Container>
+        </section>
       </main>
     </div>
   );
 };
 
 export default App;
-
-// import React from "react";
-// import { LoadScript } from "@react-google-maps/api";
-// import Map from "./components/Map";
-
-// const lib = ["places"];
-// export const key = "AIzaSyD5sgxYjVndnPUYM4qwwX1yBRhtAaLPZaQ";
-
-// const App = () => (
-//   <LoadScript googleMapsApiKey={key} libraries={lib}>
-//     <Map />
-//   </LoadScript>
-// );
-
-// export default App;

@@ -1,6 +1,7 @@
 import React from "react";
 
 import { MarkerF, InfoWindowF } from "@react-google-maps/api";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Marker({
   selectedMarker,
@@ -11,7 +12,9 @@ export default function Marker({
 }) {
   const accessibilityBlock = marker.accessibilities?.length ? (
     <>
-      <p>Зручності:</p>
+      <p>
+        <strong>Зручності:</strong>
+      </p>
       <ul>
         {marker.accessibilities.map((accessibility, index) => (
           <li key={index}>{accessibility.label}</li>
@@ -32,13 +35,28 @@ export default function Marker({
     >
       {selectedMarker?.id === marker?.id && (
         <InfoWindowF position={marker.position} onCloseClick={closeInfoWindow}>
-          <>
-            <h5>{marker.info}</h5>
-            {marker.description && <p>{marker.description}</p>}
-            {marker.type?.label && <p>{marker.type.label}</p>}
-            {marker.schedule?.label && <p>{marker.schedule}</p>}
-            {accessibilityBlock}
-          </>
+          <div className="card" style={{ width: "18rem" }}>
+            <div className="card-body">
+              <h5 className="card-title">{marker.info}</h5>
+              {marker.description && (
+                <p className="card-text">{marker.description}</p>
+              )}
+              {marker.type?.label && (
+                <p className="card-text">
+                  <strong>{marker.type.label}</strong>
+                </p>
+              )}
+              {marker.schedule && (
+                <p className="card-text">
+                  <span>
+                    <strong>Розклад роботи:</strong>{" "}
+                  </span>
+                  {marker.schedule}
+                </p>
+              )}
+              {accessibilityBlock}
+            </div>
+          </div>
         </InfoWindowF>
       )}
     </MarkerF>
