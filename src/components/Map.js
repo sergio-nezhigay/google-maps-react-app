@@ -1,20 +1,8 @@
 /*global google*/
 import React, { useState } from "react";
-import {
-  FormControl,
-  Button,
-  Col,
-  Form,
-  InputGroup,
-  Row,
-} from "react-bootstrap";
+import { FormControl, Button, Col, Row } from "react-bootstrap";
 
-import {
-  GoogleMap,
-  DirectionsRenderer,
-  MarkerF,
-  InfoWindowF,
-} from "@react-google-maps/api";
+import { GoogleMap, DirectionsRenderer } from "@react-google-maps/api";
 
 import useInitMarkers from "../utils/useInitMarkers";
 import geocodeFromString from "../utils/geocodeFromString";
@@ -27,10 +15,6 @@ let directionsService;
 let directionsDisplay;
 
 const Map = () => {
-  const [destination, setDestination] = useState({
-    lat: 50.5083,
-    lng: 30.4989,
-  });
   const [directions, setDirections] = useState(null);
   const [selectedMarker, setSelectedMarker] = useState(null);
   const [destinationInput, setDestinationInput] = useState("");
@@ -63,7 +47,6 @@ const Map = () => {
     directionsService = null;
     init();
     const newDestination = { lat: e.latLng.lat(), lng: e.latLng.lng() };
-    setDestination(newDestination);
     setDestinationInput("");
     changeDirection(origin, newDestination);
   };
@@ -74,7 +57,6 @@ const Map = () => {
 
   const handleDestinationSubmit = () => {
     geocodeFromString(destinationInput).then((coordinates) => {
-      setDestination(coordinates);
       changeDirection(directionsService, origin, coordinates);
       setSelectedMarker(null);
     });
@@ -87,7 +69,7 @@ const Map = () => {
   const closeInfoWindow = () => {
     setSelectedMarker(null);
   };
-  console.log(directions);
+
   return (
     <div>
       <Row className="mb-2 mx-auto">

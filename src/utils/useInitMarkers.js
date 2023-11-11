@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import rawPlaces from "../convertcsv.json";
+import rawPlaces from "../data/sample-data.json";
+
 const places = [];
 
 export default function useInitMarkers() {
@@ -7,11 +8,18 @@ export default function useInitMarkers() {
 
   useEffect(() => {
     rawPlaces.forEach((item, index) => {
-      if (+item?.AB > 20) {
+      if (
+        item.name &&
+        item.coordinates.latitude &&
+        item.coordinates.longitude
+      ) {
         places.push({
           id: index,
-          position: { lat: +item.AB, lng: +item.AC },
-          info: item.C,
+          position: {
+            lat: +item.coordinates.latitude,
+            lng: +item.coordinates.longitude,
+          },
+          info: item.name,
         });
       }
     });

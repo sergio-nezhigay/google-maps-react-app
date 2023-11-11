@@ -1,0 +1,2276 @@
+[
+  {
+    "name": "Сільпо",
+    "coordinates": {
+      "latitude": "50.4621138",
+      "longitude": "30.4941865"
+    },
+    "type": {
+      "name": "SHOP",
+      "label": "Магазин / супермаркет"
+    },
+    "address": "Київ, вул. Глибочицька, 32Б",
+    "schedule": "08:00-22:30",
+    "accessibility": [
+      {
+        "name": "RAMP",
+        "label": "Пандус"
+      }
+    ],
+    "source": "Сільпо"
+  },
+  {
+    "name": "Кавовий острів PapaKiry",
+    "coordinates": {
+      "latitude": "50.4618248",
+      "longitude": "30.4995932"
+    },
+    "type": {
+      "name": "CATERING",
+      "label": "Харчування"
+    },
+    "address": "Глибочицька, 44, БЦ \"Глибочицький\", магазин \"Ультрамаркет\"",
+    "schedule": "8:30 до 21:00",
+    "description": "Безкоштовно кава чай та смаколики",
+    "accessibility": [
+      {
+        "name": "RAMP",
+        "label": "Пандус"
+      },
+      {
+        "name": "ELEVATOR",
+        "label": "Ліфт"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Вбиральня для людей з інвалідністю"
+      },
+      {
+        "name": "SPECIAL_PARKING",
+        "label": "Парковка для людей з інвалідністю"
+      }
+    ]
+  },
+  {
+    "name": "Світлофор",
+    "coordinates": {
+      "latitude": "50.4676163",
+      "longitude": "30.5141981"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "вул. Глибочицька - Вознесенський узвіз - вул. Нижній Вал",
+    "accessibility": [
+      {
+        "name": "TRAFFIC_LIGHT_WITH_SOUND",
+        "label": "Світлофор зі звуковим сигналом"
+      }
+    ],
+    "source": "Департамент транспортної інфраструктури"
+  },
+  {
+    "name": "Пиріжкова Тітка Клара",
+    "coordinates": {
+      "latitude": "50.4607925",
+      "longitude": "30.5101445"
+    },
+    "type": {
+      "name": "CATERING",
+      "label": "Харчування"
+    },
+    "address": "Київ, Воздвиженська 22",
+    "schedule": "Пн-Пт: 8:00 - 21:00 Сб-Вс: 8:30 - 21:00",
+    "description": "Встановлені дзвоники для виклику співробітника при вході для людей з інвалідністю",
+    "accessibility": [
+      {
+        "name": "RAMP",
+        "label": "Пандус"
+      }
+    ],
+    "source": "Пиріжкова Тітка Клара"
+  },
+  {
+    "name": "Сільпо",
+    "coordinates": {
+      "latitude": "50.4624602",
+      "longitude": "30.5189963"
+    },
+    "type": {
+      "name": "SHOP",
+      "label": "Магазин / супермаркет"
+    },
+    "address": "Київ, вул. Сагайдачного Петра, 41",
+    "schedule": "08:00-23:00",
+    "accessibility": [
+      {
+        "name": "LOW_ENTRY",
+        "label": "Вхід в рівень з тротуаром"
+      }
+    ],
+    "source": "Сільпо,"
+  },
+  {
+    "name": "Реконструкція вул. Покровської",
+    "coordinates": {
+      "latitude": "50.4611225",
+      "longitude": "30.5192742"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "вул. Покровськоі",
+    "description": "Будівництво/ремонт з врахуванням норм безбар'єрності: ДБН В.2.3-5:2018 «Вулиці та дороги населених пунктів», ДБН В.2.2-40:2018 «Інклюзивність будівель та споруд»",
+    "source": "Департамент транспортної інфраструктури"
+  },
+  {
+    "name": "вул. Андріївська",
+    "coordinates": {
+      "latitude": "50.4617396",
+      "longitude": "30.5227097"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "вул. Андріївська",
+    "accessibility": [
+      {
+        "name": "LOWERED_BARRIER",
+        "label": "Понижений бордюр"
+      },
+      {
+        "name": "TACTILE_TILES",
+        "label": "Тактильна плитка"
+      }
+    ],
+    "source": "Подільська районна адміністрація  / Київавтодор"
+  },
+  {
+    "name": "Пиріжкова Тітка Клара",
+    "coordinates": {
+      "latitude": "50.46049350000001",
+      "longitude": "30.5222537"
+    },
+    "type": {
+      "name": "CATERING",
+      "label": "Харчування"
+    },
+    "address": "Київ, Сагайдачного 25",
+    "schedule": "Пн-Пт: 8:00 - 21:00 Сб-Вс: 8:30 - 21:00",
+    "description": "Встановлені дзвоники для виклику співробітника при вході для людей з інвалідністю",
+    "accessibility": [
+      {
+        "name": "LOW_ENTRY",
+        "label": "Вхід в рівень з тротуаром"
+      }
+    ],
+    "source": "Пиріжкова Тітка Клара"
+  },
+  {
+    "name": "Пляж «Центральний» на Трухановому острові",
+    "coordinates": {
+      "latitude": "50.4609367",
+      "longitude": "30.5334863"
+    },
+    "type": {
+      "name": "PARK",
+      "label": "Парки, сквери"
+    },
+    "description": "Створення умов для людей з інвалідністю, включаючи спеціально обладнані фонтанчики. Доріжка, яка надає прямий доступ до води."
+  },
+  {
+    "name": "вул. Г. Сковороди (вiд вул. Волоська до Контрактова площа)",
+    "coordinates": {
+      "latitude": "50.4685061",
+      "longitude": "30.5173067"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "accessibility": [
+      {
+        "name": "LOWERED_BARRIER",
+        "label": "Понижений бордюр"
+      },
+      {
+        "name": "TACTILE_TILES",
+        "label": "Тактильна плитка"
+      }
+    ],
+    "source": "Подільська районна адміністрація  / Київавтодор"
+  },
+  {
+    "name": "вул. Спаська (вiд вул. Межигiрська до вул. Почайнинська)",
+    "coordinates": {
+      "latitude": "50.4672003",
+      "longitude": "30.5195406"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "accessibility": [
+      {
+        "name": "LOWERED_BARRIER",
+        "label": "Понижений бордюр"
+      },
+      {
+        "name": "TACTILE_TILES",
+        "label": "Тактильна плитка"
+      }
+    ],
+    "source": "Подільська районна адміністрація  / Київавтодор"
+  },
+  {
+    "name": "вул. Нижній Вал - вул. Житньоторгська",
+    "coordinates": {
+      "latitude": "50.4676163",
+      "longitude": "30.5141981"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "accessibility": [
+      {
+        "name": "TRAFFIC_LIGHT_WITH_SOUND",
+        "label": "Світлофор зі звуковим сигналом"
+      }
+    ],
+    "source": "Департамент транспортної інфраструктури"
+  },
+  {
+    "name": "Пиріжкова Тітка Клара",
+    "coordinates": {
+      "latitude": "50.4667982",
+      "longitude": "30.5116199"
+    },
+    "type": {
+      "name": "CATERING",
+      "label": "Харчування"
+    },
+    "address": "Київ, Костянтинівська 19",
+    "schedule": "Пн-Пт: 8:00 - 21:00 Сб-Вс: 8:30 - 21:00",
+    "description": "Встановлені дзвоники для виклику співробітника при вході для людей з інвалідністю",
+    "accessibility": [
+      {
+        "name": "LOW_ENTRY",
+        "label": "Вхід в рівень з тротуаром"
+      }
+    ],
+    "source": "Пиріжкова Тітка Клара"
+  },
+  {
+    "name": "Бібліотека на Межигірській для дітей",
+    "coordinates": {
+      "latitude": "50.4689163",
+      "longitude": "30.5117318"
+    },
+    "type": {
+      "name": "EDUCATION",
+      "label": "Освіта"
+    },
+    "address": "вул. Межигірська, 25",
+    "description": "Безбарʼєрний багатофункціональний простір",
+    "source": "Подільська районна адміністрація  / Київавтодор"
+  },
+  {
+    "name": "вул. Кирилівська – вул. Юрківська – вул. Нижньо-Юрківська",
+    "coordinates": {
+      "latitude": "50.4804529",
+      "longitude": "30.479371"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "description": "Світлофорні обʼєкти, на яких реалізовані заходи безбар'єрного середовища",
+    "accessibility": [
+      {
+        "name": "LOWERED_BARRIER",
+        "label": "Понижений бордюр"
+      },
+      {
+        "name": "TACTILE_TILES",
+        "label": "Тактильна плитка"
+      }
+    ],
+    "source": "Департамент транспортної інфраструктури"
+  },
+  {
+    "name": "Сільпо",
+    "coordinates": {
+      "latitude": "50.471407",
+      "longitude": "30.5175096"
+    },
+    "type": {
+      "name": "SHOP",
+      "label": "Магазин / супермаркет"
+    },
+    "address": "Київ, вул. Ярославська, 56А",
+    "schedule": "08:00-23:59",
+    "accessibility": [
+      {
+        "name": "LOW_ENTRY",
+        "label": "Вхід в рівень з тротуаром"
+      }
+    ],
+    "source": "Сільпо"
+  },
+  {
+    "name": "вул. Волоська (вiд вул. Typiвськa до вул. Нижкнiй Вал)",
+    "coordinates": {
+      "latitude": "50.4685061",
+      "longitude": "30.5173067"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "accessibility": [
+      {
+        "name": "LOWERED_BARRIER",
+        "label": "Понижений бордюр"
+      },
+      {
+        "name": "TACTILE_TILES",
+        "label": "Тактильна плитка"
+      }
+    ],
+    "source": "Подільська районна адміністрація  / Київавтодор"
+  },
+  {
+    "name": "вул. Межигірська – вул. Оболонська",
+    "coordinates": {
+      "latitude": "50.4713112",
+      "longitude": "30.5082771"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "description": "Світлофорні обʼєкти, на яких реалізовані заходи безбар'єрного середовища",
+    "accessibility": [
+      {
+        "name": "LOWERED_BARRIER",
+        "label": "Понижений бордюр"
+      },
+      {
+        "name": "TACTILE_TILES",
+        "label": "Тактильна плитка"
+      }
+    ],
+    "source": "Департамент транспортної інфраструктури"
+  },
+  {
+    "name": "ул. Межигірська – вул. Оболонська",
+    "coordinates": {
+      "latitude": "50.4713112",
+      "longitude": "30.5082771"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "description": "Світлофорні обʼєкти, на яких реалізовані заходи безбар'єрного середовища",
+    "accessibility": [
+      {
+        "name": "LOWERED_BARRIER",
+        "label": "Понижений бордюр"
+      },
+      {
+        "name": "TACTILE_TILES",
+        "label": "Тактильна плитка"
+      }
+    ],
+    "source": "Департамент транспортної інфраструктури"
+  },
+  {
+    "name": "вул. Кирилівська – вул. Юрківська – вул. Нижньо-Юрківська",
+    "coordinates": {
+      "latitude": "50.4696366",
+      "longitude": "30.5030264"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "description": "Світлофорні обʼєкти, на яких реалізовані заходи безбар'єрного середовища",
+    "accessibility": [
+      {
+        "name": "LOWERED_BARRIER",
+        "label": "Понижений бордюр"
+      },
+      {
+        "name": "TACTILE_TILES",
+        "label": "Тактильна плитка"
+      }
+    ],
+    "source": "Департамент транспортної інфраструктури"
+  },
+  {
+    "name": "Сільпо",
+    "coordinates": {
+      "latitude": "50.4714335",
+      "longitude": "30.5022901"
+    },
+    "type": {
+      "name": "SHOP",
+      "label": "Магазин / супермаркет"
+    },
+    "address": "Київ, вул. Оленівська, 3",
+    "schedule": "08:00-23:30",
+    "accessibility": [
+      {
+        "name": "RAMP",
+        "label": "Пандус"
+      }
+    ],
+    "source": "Сільпо"
+  },
+  {
+    "name": "Пиріжкова Тітка Клара",
+    "coordinates": {
+      "latitude": "50.4705494",
+      "longitude": "30.50095979999999"
+    },
+    "type": {
+      "name": "CATERING",
+      "label": "Харчування"
+    },
+    "address": "Київ, Кирилівська 37",
+    "schedule": "Пн-Пт: 8:00 - 21:00 Сб-Вс: 8:30 - 21:00",
+    "description": "Встановлені дзвоники для виклику співробітника при вході для людей з інвалідністю",
+    "accessibility": [
+      {
+        "name": "RAMP",
+        "label": "Пандус"
+      }
+    ],
+    "source": "Пиріжкова Тітка Клара"
+  },
+  {
+    "name": "вул. Typiвcькa",
+    "coordinates": {
+      "latitude": "50.4501",
+      "longitude": "30.5234"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "accessibility": [
+      {
+        "name": "LOWERED_BARRIER",
+        "label": "Понижений бордюр"
+      },
+      {
+        "name": "TACTILE_TILES",
+        "label": "Тактильна плитка"
+      }
+    ],
+    "source": "Подільська районна адміністрація  / Київавтодор"
+  },
+  {
+    "name": "вул. Кирилівська - завод \"Фармак\"",
+    "coordinates": {
+      "latitude": "50.4754073",
+      "longitude": "30.4914845"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "accessibility": [
+      {
+        "name": "TRAFFIC_LIGHT_WITH_SOUND",
+        "label": "Світлофор зі звуковим сигналом"
+      }
+    ],
+    "source": "Департамент транспортної інфраструктури"
+  },
+  {
+    "name": "Сільпо",
+    "coordinates": {
+      "latitude": "50.4704456",
+      "longitude": "30.4773422"
+    },
+    "type": {
+      "name": "SHOP",
+      "label": "Магазин / супермаркет"
+    },
+    "address": "Київ, вул. Багговутівська, 17-20",
+    "schedule": "08:00-23:00",
+    "accessibility": [
+      {
+        "name": "LOW_ENTRY",
+        "label": "Вхід в рівень з тротуаром"
+      },
+      {
+        "name": "SPECIAL_PARKING",
+        "label": "Парковка для людей з інвалідністю"
+      }
+    ],
+    "source": "Сільпо"
+  },
+  {
+    "name": "вул. Електриків - пр-т Електриків",
+    "coordinates": {
+      "latitude": "50.4827341",
+      "longitude": "30.518457"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "accessibility": [
+      {
+        "name": "TRAFFIC_LIGHT_WITH_SOUND",
+        "label": "Світлофор зі звуковим сигналом"
+      }
+    ],
+    "source": "Департамент транспортної інфраструктури"
+  },
+  {
+    "name": "ДЕПАРТАМЕНТ СОЦІАЛЬНОЇ ПОЛІТИКИ",
+    "coordinates": {
+      "latitude": "50.434575600000",
+      "longitude": "30.4080348"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Проспект, Любомира Гузара, 7",
+    "accessibility": [
+      {
+        "name": "SPECIAL_PARKING",
+        "label": "Спеціальні місця для паркування"
+      },
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "NON_VISUAL_ORIENTATION",
+        "label": "Засоби невізуальної орієнтації"
+      },
+      {
+        "name": "NON_ACOUSTIC_ORIENTATION",
+        "label": "Засоби неакустичної орієнтації"
+      },
+      {
+        "name": "ELEVATOR",
+        "label": "Наявність спеціального ліфту"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      },
+      {
+        "name": "SPECIAL_NOTIFICATION",
+        "label": "Адаптовані пристрої оповіщення"
+      },
+      {
+        "name": "CHANGING_TABLE",
+        "label": "Пеленальний столик"
+      },
+      {
+        "name": "ACCOMPANYING_PERSON",
+        "label": "Супроводжуюча людина"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "(044) 404-21-97; (044) 15-51"
+  },
+  {
+    "name": "КИЇВСЬКИЙ МІСЬКИЙ ЦЕНТР ПО НАРАХУВАННЮ ТА ЗДІЙСНЕННЮ СОЦІАЛЬНИХ ВИПЛАТ",
+    "coordinates": {
+      "latitude": "50.434575600000",
+      "longitude": "30.4080348"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Проспект, Любомира Гузара, 7",
+    "accessibility": [
+      {
+        "name": "SPECIAL_PARKING",
+        "label": "Спеціальні місця для паркування"
+      },
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "NON_VISUAL_ORIENTATION",
+        "label": "Засоби невізуальної орієнтації"
+      },
+      {
+        "name": "NON_ACOUSTIC_ORIENTATION",
+        "label": "Засоби неакустичної орієнтації"
+      },
+      {
+        "name": "ELEVATOR",
+        "label": "Наявність спеціального ліфту"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      },
+      {
+        "name": "SPECIAL_NOTIFICATION",
+        "label": "Адаптовані пристрої оповіщення"
+      },
+      {
+        "name": "CHANGING_TABLE",
+        "label": "Пеленальний столик"
+      },
+      {
+        "name": "ACCOMPANYING_PERSON",
+        "label": "Супроводжуюча людина"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "(044) 408-54-88"
+  },
+  {
+    "name": "КИЇВСЬКИЙ МІСЬКИЙ ТЕРИТОРІАЛЬНИЙ ЦЕНТР СОЦІАЛЬНОГО ОБСЛУГОВУВАННЯ (НАДАННЯ СОЦІАЛЬНИХ ПОСЛУГ) У М. КИЄВІ",
+    "coordinates": {
+      "latitude": "50.452172400000",
+      "longitude": "30.3734857"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Вулиця, М. Котельникова, 32/11",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "ACCOMPANYING_PERSON",
+        "label": "Супроводжуюча людина"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "(044) 450-91-66"
+  },
+  {
+    "name": "КИЇВСЬКИЙ МІСЬКИЙ ЦЕНТР ГЕНДЕРНОЇ РІВНОСТІ, ЗАПОБІГАННЯ ТА ПРОТИДІЇ НАСИЛЬСТВУ",
+    "coordinates": {
+      "latitude": "50.467520100000",
+      "longitude": "30.4727836"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Вулиця, Іллєнка, 20",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "WI_FI",
+        "label": "Wi-Fi"
+      },
+      {
+        "name": "CHANGING_TABLE",
+        "label": "Пеленальний столик"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": ""
+  },
+  {
+    "name": "КИЇВСЬКИЙ ПАНСІОНАТ ВЕТЕРАНІВ ПРАЦІ",
+    "coordinates": {
+      "latitude": "50.476561000000",
+      "longitude": "30.6399776"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Вулиця, Кубанської України, 2",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": ""
+  },
+  {
+    "name": "НОВО-БІЛИЦЬКИЙ ПСИХОНЕВРОЛОГІЧНИЙ ІНТЕРНАТ ДЛЯ ЧОЛОВІКІВ",
+    "coordinates": {
+      "latitude": "50.475249400000",
+      "longitude": "30.3393153"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Вулиця, Підлісна, 8",
+    "accessibility": [
+      {
+        "name": "SPECIAL_PARKING",
+        "label": "Спеціальні місця для паркування"
+      },
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "ELEVATOR",
+        "label": "Наявність спеціального ліфту"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      },
+      {
+        "name": "ACCOMPANYING_PERSON",
+        "label": "Супроводжуюча людина"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "(044) 424-13-27"
+  },
+  {
+    "name": "ПУЩА-ВОДИЦЬКИЙ ПСИХОНЕВРОЛОГІЧНИЙ ІНТЕРНАТ",
+    "coordinates": {
+      "latitude": "50.525980800000",
+      "longitude": "30.3669307"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Вулиця, Міська, 2",
+    "accessibility": [
+      {
+        "name": "SPECIAL_PARKING",
+        "label": "Спеціальні місця для паркування"
+      },
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      },
+      {
+        "name": "ACCOMPANYING_PERSON",
+        "label": "Супроводжуюча людина"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "(044) 401-97-03"
+  },
+  {
+    "name": "СВЯТОШИНСЬКИЙ ПСИХОНЕВРОЛОГІЧНИЙ ІНТЕРНАТ",
+    "coordinates": {
+      "latitude": "50.451089700000",
+      "longitude": "30.3724712"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Вулиця, Івана Крамського, 16",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      },
+      {
+        "name": "ACCOMPANYING_PERSON",
+        "label": "Супроводжуюча людина"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "(044) 450 92 77"
+  },
+  {
+    "name": "СВЯТОШИНСЬКИЙ ДИТЯЧИЙ БУДИНОК ІНТЕРНАТ",
+    "coordinates": {
+      "latitude": "50.451089700000",
+      "longitude": "30.3724712"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Вулиця, Івана Крамського, 16.",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": ""
+  },
+  {
+    "name": "КИЇВСЬКИЙ ПСИХОНЕВРОЛОГІЧНИЙ ІНТЕРНАТ",
+    "coordinates": {
+      "latitude": "50.539192300000",
+      "longitude": "30.3522556"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Вулиця, Юнкерова, 37",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": ""
+  },
+  {
+    "name": "КИЇВСЬКИЙ ГЕРІАТРИЧНИЙ ПАНСІОНАТ",
+    "coordinates": {
+      "latitude": "50.441258000000",
+      "longitude": "30.279867"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Вулиця, Бударіна, 11",
+    "accessibility": [
+      {
+        "name": "SPECIAL_PARKING",
+        "label": "Спеціальні місця для паркування"
+      },
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "ELEVATOR",
+        "label": "Наявність спеціального ліфту"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      },
+      {
+        "name": "SPECIAL_NOTIFICATION",
+        "label": "Адаптовані пристрої оповіщення"
+      },
+      {
+        "name": "ACCOMPANYING_PERSON",
+        "label": "Супроводжуюча людина"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "(044) 228-30-72"
+  },
+  {
+    "name": "ДАРНИЦЬКИЙ ДИТЯЧИЙ БУДИНОК-ІНТЕРНАТ",
+    "coordinates": {
+      "latitude": "50.432442000000",
+      "longitude": "30.6381944"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Вулиця, Сиваська, 16",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": ""
+  },
+  {
+    "name": "КИЇВСЬКИЙ МІСЬКИЙ ЦЕНТР СОЦІАЛЬНОЇ, ПРОФЕСІЙНОЇ ТА ТРУДОВОЇ РЕАБІЛІТАЦІЇ ІНВАЛІДІВ",
+    "coordinates": {
+      "latitude": "50.446378000000",
+      "longitude": "30.507747"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Вулиця, Івана Франка, 36, Б",
+    "accessibility": [
+      {
+        "name": "SPECIAL_PARKING",
+        "label": "Спеціальні місця для паркування"
+      },
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "NON_VISUAL_ORIENTATION",
+        "label": "Засоби невізуальної орієнтації"
+      },
+      {
+        "name": "NON_ACOUSTIC_ORIENTATION",
+        "label": "Засоби неакустичної орієнтації"
+      },
+      {
+        "name": "SPECIAL_NOTIFICATION",
+        "label": "Адаптовані пристрої оповіщення"
+      },
+      {
+        "name": "WI_FI",
+        "label": "Wi-Fi"
+      },
+      {
+        "name": "CHANGING_TABLE",
+        "label": "Пеленальний столик"
+      },
+      {
+        "name": "ACCOMPANYING_PERSON",
+        "label": "Супроводжуюча людина"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "(044) 235-87-94"
+  },
+  {
+    "name": "КИЇВСЬКИЙ МІСЬКИЙ ПАЛАЦ ВЕТЕРАНІВ",
+    "coordinates": {
+      "latitude": "50.417146100000",
+      "longitude": "30.5548198"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Вулиця, Бастіонна, 11",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "ELEVATOR",
+        "label": "Наявність спеціального ліфту"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": ""
+  },
+  {
+    "name": "КИЇВСЬКИЙ МІСЬКИЙ КОМУНАЛЬНИЙ ЦЕНТР КОМПЛЕКСНОЇ РЕАБІЛІТАЦІЇ ДЛЯ ОСІБ З ІНВАЛІДНІСТЮ ВНАСЛІДОК ІНТЕЛЕКТУАЛЬНИХ ПОРУШЕНЬ «ТРАМПЛІН»",
+    "coordinates": {
+      "latitude": "50.513603400000",
+      "longitude": "30.425161"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Проспект, Свободи, 26",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": ""
+  },
+  {
+    "name": "БУДИНОК СОЦІАЛЬНОГО ПІКЛУВАННЯ",
+    "coordinates": {
+      "latitude": "50.422596800000",
+      "longitude": "30.4299827"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Вулиця, Суздальська, 4-Jun",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": ""
+  },
+  {
+    "name": "КИЇВСЬКИЙ МІСЬКИЙ ЦЕНТР КОМПЛЕКСНОГО ОБСЛУГОВУВАННЯ БЕЗДОМНИХ ОСІБ",
+    "coordinates": {
+      "latitude": "50.450100000000",
+      "longitude": "30.5234"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": ""
+  },
+  {
+    "name": "САНАТОРІЙ ПРОФІЛАКТОРІЙ „ТЕТЕРІВ”",
+    "coordinates": {
+      "latitude": "50.426198500000",
+      "longitude": "30.6602636"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Вулиця, Санаторна, 1, смт. Пісківка, Бородянського р-ну, Київської обл., 07820",
+    "source": "Мапа доступності",
+    "phone": ""
+  },
+  {
+    "name": "ЦЕНТР ОБЛІКУ БЕЗДОМНИХ ОСІБ",
+    "coordinates": {
+      "latitude": "50.449894000000",
+      "longitude": "30.4332649"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Вулиця, Гарматна, 16/85",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": ""
+  },
+  {
+    "name": "ЦЕНТР ОБЛІКУ БЕЗДОМНИХ ОСІБ",
+    "coordinates": {
+      "latitude": "50.451076200000",
+      "longitude": "30.6766748"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Вулиця, Рогозівська, Apr-17",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": ""
+  },
+  {
+    "name": "СПЕЦІАЛІЗОВАНИЙ БУДИНОК ДЛЯ ВЕТЕРАНІВ ВІЙНИ ТА ПРАЦІ, ГРОМАДЯН ПОХИЛОГО ВІКУ ТА ІНВАЛІДІВ",
+    "coordinates": {
+      "latitude": "50.452172400000",
+      "longitude": "30.3734857"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Вулиця, М.Котельникова, 32/11",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "ELEVATOR",
+        "label": "Наявність спеціального ліфту"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": ""
+  },
+  {
+    "name": "СПЕЦІАЛІЗОВАНИЙ БУДИНОК ДЛЯ ВЕТЕРАНІВ ВІЙНИ ТА ПРАЦІ, ГРОМАДЯН ПОХИЛОГО ВІКУ ТА ІНВАЛІДІВ",
+    "coordinates": {
+      "latitude": "50.529478500000",
+      "longitude": "30.6056007"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Вулиця, Будищанська, 4",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "ELEVATOR",
+        "label": "Наявність спеціального ліфту"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": ""
+  },
+  {
+    "name": "КОМУНАЛЬНА СОЦІАЛЬНА УСТАНОВА «КИЇВСЬКИЙ РЕАБІЛІТАЦІЙНИЙ КОМПЛЕКС ЗМІШАНОГО ТИПУ ДЛЯ ОСІБ З ІНВАЛІДНІСТЮ ВНАСЛІДОК ІНТЕЛЕКТУАЛЬНИХ ПОРУШЕНЬ»",
+    "coordinates": {
+      "latitude": "50.432442000000",
+      "longitude": "30.6381944"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Вулиця, Сиваська, 16",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": ""
+  },
+  {
+    "name": "СПЕЦІАЛІЗОВАНИЙ БУДИНОК ДЛЯ ВЕТЕРАНІВ ВІЙНИ ТА ПРАЦІ, ГРОМАДЯН ПОХИЛОГО ВІКУ ТА ІНВАЛІДІВ",
+    "coordinates": {
+      "latitude": "50.512374000000",
+      "longitude": "30.4391558"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Вулиця, І. Іжакевича, 3",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "ELEVATOR",
+        "label": "Наявність спеціального ліфту"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": ""
+  },
+  {
+    "name": "КОМУНАЛЬНА РЕАБІЛІТАЦІЙНА УСТАНОВА \"КИЇВСЬКИЙ МІСЬКИЙ ЦЕНТР НЕЗРЯЧИХ\"",
+    "coordinates": {
+      "latitude": "50.458382100000",
+      "longitude": "30.3967157"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Проспект, Перемоги, 98/2",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": ""
+  },
+  {
+    "name": "КИЇВСЬКИЙ МІСЬКИЙ ЦЕНТР РЕАБІЛІТАЦІЇ ДІТЕЙ З ІНВАЛІДНІСТЮ",
+    "coordinates": {
+      "latitude": "50.480350000000",
+      "longitude": "30.4503911"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Вулиця, Олени Теліги, 37, Г",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "ELEVATOR",
+        "label": "Наявність спеціального ліфту"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      },
+      {
+        "name": "SPECIAL_NOTIFICATION",
+        "label": "Адаптовані пристрої оповіщення"
+      },
+      {
+        "name": "GESTURE_TRANSLATOR",
+        "label": "Перекладач з жестової мови"
+      },
+      {
+        "name": "WI_FI",
+        "label": "Wi-Fi"
+      },
+      {
+        "name": "CHANGING_TABLE",
+        "label": "Пеленальний столик"
+      },
+      {
+        "name": "CHILD_ROOM",
+        "label": "Дитяча кімната"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": ""
+  },
+  {
+    "name": "Центр соціальної реабілітації осіб з інтелектуальними та психічними порушеннями",
+    "coordinates": {
+      "latitude": "50.472917500000",
+      "longitude": "30.615794"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Вулиця, Миропільська, 8",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": ""
+  },
+  {
+    "name": "Управління соціального захисту населення Голосіївської районної в місті Києві державної адміністрації",
+    "coordinates": {
+      "latitude": "50.392095100000",
+      "longitude": "30.4991833"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "вулиця, Юлії Здановської, 5, 3",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "257-01-34; __"
+  },
+  {
+    "name": "Територіальний центр соціального обслуговування (надання соціальнимх послуг) Голосіївського району м.Києва",
+    "coordinates": {
+      "latitude": "50.441077700000",
+      "longitude": "30.5050363"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "вулиця, Льва Толстого, 25, 2",
+    "accessibility": [
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      },
+      {
+        "name": "WI_FI",
+        "label": "Wi-Fi"
+      },
+      {
+        "name": "ACCOMPANYING_PERSON",
+        "label": "Супроводжуюча людина"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "235-00-40; __"
+  },
+  {
+    "name": "Голосіївський районний в місті Києві центр соціальних служб",
+    "coordinates": {
+      "latitude": "50.393353700000",
+      "longitude": "30.5030161"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "вулиця, Юлії Здановської, 5",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "NON_VISUAL_ORIENTATION",
+        "label": "Засоби невізуальної орієнтації"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "257 03 49; __"
+  },
+  {
+    "name": "Центр у справах сім'ї та жінок \"Родинний дім\"",
+    "coordinates": {
+      "latitude": "50.401269000000",
+      "longitude": "30.5270947"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "проспект, Науки, 18",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      },
+      {
+        "name": "WI_FI",
+        "label": "Wi-Fi"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "524-20-31 (77); 524-20-31 (77)"
+  },
+  {
+    "name": "Управління соціального захисту населення Дарницької районної в місті Києві державної адміністрації",
+    "coordinates": {
+      "latitude": "50.410939000000",
+      "longitude": "30.6654876"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "шосе, Харківське, 176, Г",
+    "accessibility": [
+      {
+        "name": "SPECIAL_PARKING",
+        "label": "Спеціальні місця для паркування"
+      },
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "NON_VISUAL_ORIENTATION",
+        "label": "Засоби невізуальної орієнтації"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "044-564-43-90; 800509902"
+  },
+  {
+    "name": "Управління соціатьного захисту населення Деснянської районної в місті Києві державної адміністрації",
+    "coordinates": {
+      "latitude": "50.526205900000",
+      "longitude": "30.6235512"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "вулиця, Закревського, 87Д",
+    "accessibility": [
+      {
+        "name": "SPECIAL_PARKING",
+        "label": "Спеціальні місця для паркування"
+      },
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "SHELTER",
+        "label": "Укриття"
+      },
+      {
+        "name": "WI_FI",
+        "label": "Wi-Fi"
+      },
+      {
+        "name": "CHANGING_TABLE",
+        "label": "Пеленальний столик"
+      },
+      {
+        "name": "CHILD_ROOM",
+        "label": "Дитяча кімната"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "(044) 5301616; (044) 5304222"
+  },
+  {
+    "name": "Центр комплексної реабілітації для осіб з інвалідністю Деснянського району міста Києва",
+    "coordinates": {
+      "latitude": "50.501787500000",
+      "longitude": "30.5987065"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "проспект, Червоної Калини, 10 А",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      },
+      {
+        "name": "SPECIAL_NOTIFICATION",
+        "label": "Адаптовані пристрої оповіщення"
+      },
+      {
+        "name": "CHANGING_TABLE",
+        "label": "Пеленальний столик"
+      },
+      {
+        "name": "CHILD_ROOM",
+        "label": "Дитяча кімната"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "(044)515-04-06"
+  },
+  {
+    "name": "Територіальний центр соціатьного обслуговування Деснянського району' міста Києв",
+    "coordinates": {
+      "latitude": "50.467606500000",
+      "longitude": "30.3464513"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "вулиця, Будшца- нська, 4",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      },
+      {
+        "name": "SHELTER",
+        "label": "Укриття"
+      },
+      {
+        "name": "WI_FI",
+        "label": "Wi-Fi"
+      },
+      {
+        "name": "ACCOMPANYING_PERSON",
+        "label": "Супроводжуюча людина"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "(044) 533-72-51; 38 093 207 06 90"
+  },
+  {
+    "name": "Територіальний центр соціатьного обслуговування Деснянського району' міста Києв:",
+    "coordinates": {
+      "latitude": "50.512035900000",
+      "longitude": "30.6011773"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "вулиця, Беретгі, 18",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      },
+      {
+        "name": "SHELTER",
+        "label": "Укриття"
+      },
+      {
+        "name": "WI_FI",
+        "label": "Wi-Fi"
+      },
+      {
+        "name": "ACCOMPANYING_PERSON",
+        "label": "Супроводжуюча людина"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "(044) 515-99-62; 39 093 207 06 90"
+  },
+  {
+    "name": "Територіальний центр соціатьного обслуговування Деснянського району' міста Києв:",
+    "coordinates": {
+      "latitude": "50.486319800000",
+      "longitude": "30.6344644"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "вулиця, Куба- нської України, 26 А",
+    "accessibility": [
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      },
+      {
+        "name": "ACCOMPANYING_PERSON",
+        "label": "Супроводжуюча людина"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "(044) 518-77-22; 40 093 207 06 90"
+  },
+  {
+    "name": "Управління соціального захисту населення Дніпровської районної в місті Києві державної адміністрації",
+    "coordinates": {
+      "latitude": "50.482424000000",
+      "longitude": "30.602598"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "вулиця, Остафія Дашкевича, 7А, 1",
+    "accessibility": [
+      {
+        "name": "SPECIAL_PARKING",
+        "label": "Спеціальні місця для паркування"
+      },
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "NON_VISUAL_ORIENTATION",
+        "label": "Засоби невізуальної орієнтації"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      },
+      {
+        "name": "SPECIAL_NOTIFICATION",
+        "label": "Адаптовані пристрої оповіщення"
+      },
+      {
+        "name": "WI_FI",
+        "label": "Wi-Fi"
+      },
+      {
+        "name": "ACCOMPANYING_PERSON",
+        "label": "Супроводжуюча людина"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "(044) 512 08 07"
+  },
+  {
+    "name": "Управління соціального захисту населення Оболонської районної в місті Києві державної адміністрації",
+    "coordinates": {
+      "latitude": "50.524327900000",
+      "longitude": "30.4939519"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "вулиця, Озерна, 18-А",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "NON_ACOUSTIC_ORIENTATION",
+        "label": "Засоби неакустичної орієнтації"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      },
+      {
+        "name": "ACCOMPANYING_PERSON",
+        "label": "Супроводжуюча людина"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "-; -"
+  },
+  {
+    "name": "Управління соціального захисту населення Печерської районної в місті Києві державної адміністрації",
+    "coordinates": {
+      "latitude": "50.433231600000",
+      "longitude": "30.549908"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "вулиця, Цитадельна, 4-Jul, не застосовується",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      },
+      {
+        "name": "GESTURE_TRANSLATOR",
+        "label": "Перекладач з жестової мови"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "280 69 61; ні"
+  },
+  {
+    "name": "Управління соціального захисту населення Подільської районної в місті Києві державної адміністрації",
+    "coordinates": {
+      "latitude": "50.469706200000",
+      "longitude": "30.5137254"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "вулиця, Ярославська, 31Б",
+    "accessibility": [
+      {
+        "name": "SPECIAL_PARKING",
+        "label": "Спеціальні місця для паркування"
+      },
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      },
+      {
+        "name": "GESTURE_TRANSLATOR",
+        "label": "Перекладач з жестової мови"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "044 425 25 25"
+  },
+  {
+    "name": "Центр соціальних служб Святошинського району",
+    "coordinates": {
+      "latitude": "50.432263500000",
+      "longitude": "30.3811775"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Вулиця, Гната Юри, 14-Б",
+    "accessibility": [
+      {
+        "name": "SPECIAL_PARKING",
+        "label": "Спеціальні місця для паркування"
+      },
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "NON_VISUAL_ORIENTATION",
+        "label": "Засоби невізуальної орієнтації"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      },
+      {
+        "name": "SPECIAL_NOTIFICATION",
+        "label": "Адаптовані пристрої оповіщення"
+      },
+      {
+        "name": "GESTURE_TRANSLATOR",
+        "label": "Перекладач з жестової мови"
+      },
+      {
+        "name": "WI_FI",
+        "label": "Wi-Fi"
+      },
+      {
+        "name": "CHANGING_TABLE",
+        "label": "Пеленальний столик"
+      },
+      {
+        "name": "CHILD_ROOM",
+        "label": "Дитяча кімната"
+      },
+      {
+        "name": "ACCOMPANYING_PERSON",
+        "label": "Супроводжуюча людина"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "(044) 273 20 15; (044) 273 20 15"
+  },
+  {
+    "name": "Управління соціального захисту населення",
+    "coordinates": {
+      "latitude": "50.432263500000",
+      "longitude": "30.3811775"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Вулиця, Гната Юри, 14-Б",
+    "accessibility": [
+      {
+        "name": "SPECIAL_PARKING",
+        "label": "Спеціальні місця для паркування"
+      },
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "NON_VISUAL_ORIENTATION",
+        "label": "Засоби невізуальної орієнтації"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      },
+      {
+        "name": "SPECIAL_NOTIFICATION",
+        "label": "Адаптовані пристрої оповіщення"
+      },
+      {
+        "name": "GESTURE_TRANSLATOR",
+        "label": "Перекладач з жестової мови"
+      },
+      {
+        "name": "WI_FI",
+        "label": "Wi-Fi"
+      },
+      {
+        "name": "CHANGING_TABLE",
+        "label": "Пеленальний столик"
+      },
+      {
+        "name": "CHILD_ROOM",
+        "label": "Дитяча кімната"
+      },
+      {
+        "name": "ACCOMPANYING_PERSON",
+        "label": "Супроводжуюча людина"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "(044) 273 20 15 (044 276 45 38); (044) 273 20 15 (044 276 45 38)"
+  },
+  {
+    "name": "Відділ обслуговування громадян № 8 Головного управління Пенсійного Фонду України у м. Києві",
+    "coordinates": {
+      "latitude": "50.432263500000",
+      "longitude": "30.3811775"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Вулиця, Гната Юри, 14-Б",
+    "accessibility": [
+      {
+        "name": "SPECIAL_PARKING",
+        "label": "Спеціальні місця для паркування"
+      },
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "NON_VISUAL_ORIENTATION",
+        "label": "Засоби невізуальної орієнтації"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      },
+      {
+        "name": "SPECIAL_NOTIFICATION",
+        "label": "Адаптовані пристрої оповіщення"
+      },
+      {
+        "name": "GESTURE_TRANSLATOR",
+        "label": "Перекладач з жестової мови"
+      },
+      {
+        "name": "WI_FI",
+        "label": "Wi-Fi"
+      },
+      {
+        "name": "CHANGING_TABLE",
+        "label": "Пеленальний столик"
+      },
+      {
+        "name": "CHILD_ROOM",
+        "label": "Дитяча кімната"
+      },
+      {
+        "name": "ACCOMPANYING_PERSON",
+        "label": "Супроводжуюча людина"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "(044) 405 92 06 (044) 405 92 01; 0 800 500 680"
+  },
+  {
+    "name": "Святошинське управління Київського міського центру зайнятості",
+    "coordinates": {
+      "latitude": "50.432263500000",
+      "longitude": "30.3811775"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Вулиця, Гната Юри, 14-Б",
+    "accessibility": [
+      {
+        "name": "SPECIAL_PARKING",
+        "label": "Спеціальні місця для паркування"
+      },
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "NON_VISUAL_ORIENTATION",
+        "label": "Засоби невізуальної орієнтації"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      },
+      {
+        "name": "SPECIAL_NOTIFICATION",
+        "label": "Адаптовані пристрої оповіщення"
+      },
+      {
+        "name": "GESTURE_TRANSLATOR",
+        "label": "Перекладач з жестової мови"
+      },
+      {
+        "name": "WI_FI",
+        "label": "Wi-Fi"
+      },
+      {
+        "name": "CHANGING_TABLE",
+        "label": "Пеленальний столик"
+      },
+      {
+        "name": "CHILD_ROOM",
+        "label": "Дитяча кімната"
+      },
+      {
+        "name": "ACCOMPANYING_PERSON",
+        "label": "Супроводжуюча людина"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "(044) 405 54 34; (044) 405 54 34"
+  },
+  {
+    "name": "Територіальний центр соціального обслуговування",
+    "coordinates": {
+      "latitude": "50.437788400000",
+      "longitude": "30.3757285"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Вулиця, Жмеринська, 22-А",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      },
+      {
+        "name": "WI_FI",
+        "label": "Wi-Fi"
+      },
+      {
+        "name": "ACCOMPANYING_PERSON",
+        "label": "Супроводжуюча людина"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "(044) 290 55 72; (044) 290 55 72"
+  },
+  {
+    "name": "Територіальний центр соціального обслуговування",
+    "coordinates": {
+      "latitude": "50.458049200000",
+      "longitude": "30.3449329"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Вулиця, Чорнобильська, 9",
+    "accessibility": [
+      {
+        "name": "SPECIAL_PARKING",
+        "label": "Спеціальні місця для паркування"
+      },
+      {
+        "name": "WI_FI",
+        "label": "Wi-Fi"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "(044) 290 55 72; (044) 290 55 72"
+  },
+  {
+    "name": "Відділення надання соціальних та реабілітаційних послуг для дітей з інвалідністю Територіального центру соціального обслуговування Святошинського району",
+    "coordinates": {
+      "latitude": "50.434652600000",
+      "longitude": "30.3715638"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Вулиця, Дмитра Чижевського, 3-А",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "ELEVATOR",
+        "label": "Наявність спеціального ліфту"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      },
+      {
+        "name": "SPECIAL_NOTIFICATION",
+        "label": "Адаптовані пристрої оповіщення"
+      },
+      {
+        "name": "SHELTER",
+        "label": "Укриття"
+      },
+      {
+        "name": "WI_FI",
+        "label": "Wi-Fi"
+      },
+      {
+        "name": "CHANGING_TABLE",
+        "label": "Пеленальний столик"
+      },
+      {
+        "name": "ACCOMPANYING_PERSON",
+        "label": "Супроводжуюча людина"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "(044) 299 92 28; ні"
+  },
+  {
+    "name": "Центр у справах сім’ї та жінок «Родинний дім» Святошинського району в м. Києві",
+    "coordinates": {
+      "latitude": "50.412066600000",
+      "longitude": "30.3911171"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Вулиця, Кільцева дорога, 5-Б",
+    "accessibility": [
+      {
+        "name": "WI_FI",
+        "label": "Wi-Fi"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "068 320 06 76; ні"
+  },
+  {
+    "name": "Святошинський районний в місті Києві центр соціальних служб",
+    "coordinates": {
+      "latitude": "50.427234900000",
+      "longitude": "30.3696911"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "Проспект, Леся Курбаса, 18 Г, 12 під'їзд",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      },
+      {
+        "name": "WI_FI",
+        "label": "Wi-Fi"
+      },
+      {
+        "name": "CHANGING_TABLE",
+        "label": "Пеленальний столик"
+      },
+      {
+        "name": "ACCOMPANYING_PERSON",
+        "label": "Супроводжуюча людина"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "093 800 76 71; 097 003 93 67"
+  },
+  {
+    "name": "ТЕРИТОРІАЛЬНИЙ ЦЕНТР СОЦІАЛЬНОГО ОБСЛУГОВУВАННЯ НАСЕЛЕННЯ (НАДАННЯ СОЦІАЛЬНИХ ПОСЛУГ) СОЛОМ’ЯНСЬКОГО РАЙОНУ М. КИЄВА",
+    "coordinates": {
+      "latitude": "50.426537900000",
+      "longitude": "30.420571"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "бульвар, Вацлава Гавела, 83-А",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "NON_VISUAL_ORIENTATION",
+        "label": "Засоби невізуальної орієнтації"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "044-497-73-27; ні"
+  },
+  {
+    "name": "ФІЛІЯ ТЕРИТОРІАЛЬНОГО ЦЕНТРУ СОЦІАЛЬНОГО ОБСЛУГОВУВАННЯ НАСЕЛЕННЯ (НАДАННЯ СОЦІАЛЬНИХ ПОСЛУГ) СОЛОМ’ЯНСЬКОГО РАЙОНУ М. КИЄВА",
+    "coordinates": {
+      "latitude": "50.433886600000",
+      "longitude": "30.4532844"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "вулиця, Волинська, 2",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "044-241-09-44; ні"
+  },
+  {
+    "name": "СОЛОМ'ЯНСЬКИЙ РАЙОННИЙ В М. КИЄВІ ЦЕНТР СОЦІАЛЬНИХ СЛУЖБ",
+    "coordinates": {
+      "latitude": "50.423813800000",
+      "longitude": "30.4703745"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "вулиця, Максима Кривоноса, 21",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      },
+      {
+        "name": "WI_FI",
+        "label": "Wi-Fi"
+      },
+      {
+        "name": "ACCOMPANYING_PERSON",
+        "label": "Супроводжуюча людина"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "044-243-75-26; ні"
+  },
+  {
+    "name": "ЦЕНТР КОМПЛЕКСНОЇ РЕАБІЛІТАЦІЇ ДЛЯ ДІТЕЙ ТА ОСІБ З ІНВАЛІДНІСТЮ СОЛОМ’ЯНСЬКОГО РАЙОНУ М. КИЄВА",
+    "coordinates": {
+      "latitude": "50.434396400000",
+      "longitude": "30.4439137"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "вулиця, Августина Волошина, 2",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "NON_VISUAL_ORIENTATION",
+        "label": "Засоби невізуальної орієнтації"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      },
+      {
+        "name": "WI_FI",
+        "label": "Wi-Fi"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "044-457-60-42; ні"
+  },
+  {
+    "name": "Управління соціального захисту населення Шевченківської районної в місті Києві державної адміністрації",
+    "coordinates": {
+      "latitude": "50.447038200000",
+      "longitude": "30.486682"
+    },
+    "type": {
+      "name": "INFRASTRUCTURE",
+      "label": "Інфраструктура"
+    },
+    "address": "проспект, Берестейський, 5, І поверх",
+    "accessibility": [
+      {
+        "name": "SPECIAL_ENTRANCE",
+        "label": "Вхідна група"
+      },
+      {
+        "name": "NON_VISUAL_ORIENTATION",
+        "label": "Засоби невізуальної орієнтації"
+      },
+      {
+        "name": "SPECIAL_WC",
+        "label": "Санітарно-гігєнічні приміщення"
+      },
+      {
+        "name": "WI_FI",
+        "label": "Wi-Fi"
+      }
+    ],
+    "source": "Мапа доступності",
+    "phone": "2366057; 2368114"
+  }
+]

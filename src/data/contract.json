@@ -1,0 +1,45 @@
+{
+  "id": "1234",
+  "name": "Лікарня імені Т.Г.Шевченка",
+  "description": "Має 6 вантажних лифтів",
+  "source": "ЛУН",
+  "type": {
+    "name": "MEDICINE",
+    "label": "Медицина"
+  },
+  "coordinates": {
+    "latitude": "50.4345756",
+    "longitude": "30.4080348"
+  },
+  "accessibility": [
+    {
+      "name": "RAMP",
+      "label": "Пандус"
+    },
+    {
+      "name": "ELEVATOR",
+      "label": "Ліфт"
+    },
+    {
+      "name": "LOW_ENTRY",
+      "label": "Понижений вхід"
+    }
+  ]
+}
+
+GET /map/geoobject - array of objects
+
+GET /map/geoobject/:id
+
+PUT /map/geoobject/:id
+
+POST /map/geoobject
+
+DELETE /map/geoobject/:id
+
+geoobject - id,name,description,source,type(enum),latitude,longitude
+geoobject_accessibility - geoobject_id,accessibility_id
+accessibility - id,name,label
+
++ Add Spring Security c однім адмін юзером
+user - id,role,email,password (hash)
