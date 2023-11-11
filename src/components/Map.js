@@ -1,6 +1,15 @@
 /*global google*/
 import React, { useState } from "react";
 import {
+  FormControl,
+  Button,
+  Col,
+  Form,
+  InputGroup,
+  Row,
+} from "react-bootstrap";
+
+import {
   GoogleMap,
   DirectionsRenderer,
   MarkerF,
@@ -9,6 +18,7 @@ import {
 
 import useInitMarkers from "../utils/useInitMarkers";
 import geocodeFromString from "../utils/geocodeFromString";
+import Marker from "./Marker";
 
 const defaultLocation = { lat: 50.4501, lng: 30.5234 };
 let origin = { lat: 50.4501, lng: 30.5234 };
@@ -25,13 +35,14 @@ const Map = () => {
   const [selectedMarker, setSelectedMarker] = useState(null);
   const [destinationInput, setDestinationInput] = useState("");
   const markers = useInitMarkers();
-  directionsService = new window.google.maps.DirectionsService();
 
-  const onMapLoad = () => {
-    changeDirection(directionsService, origin, destination);
-  };
+  function init() {
+    directionsService = new window.google.maps.DirectionsService();
+  }
 
-  const changeDirection = (directionsService, origin, destination) => {
+  init();
+
+  const changeDirection = (origin, destination) => {
     directionsService.route(
       {
         origin: origin,
@@ -49,10 +60,12 @@ const Map = () => {
   };
 
   const onMapClick = (e) => {
+    directionsService = null;
+    init();
     const newDestination = { lat: e.latLng.lat(), lng: e.latLng.lng() };
     setDestination(newDestination);
     setDestinationInput("");
-    changeDirection(directionsService, origin, newDestination);
+    changeDirection(origin, newDestination);
   };
 
   const handleDestinationInputChange = (event) => {
@@ -77,38 +90,39 @@ const Map = () => {
   console.log(directions);
   return (
     <div>
-      <input
-        type="text"
-        placeholder="Введіть місце призначення"
-        value={destinationInput}
-        onChange={handleDestinationInputChange}
-      />
-      <button onClick={handleDestinationSubmit}>Підтвердити</button>
+      <Row className="mb-2 mx-auto">
+        <Col>
+          <FormControl
+            type="text"
+            placeholder="Введіть місце призначення "
+            className="mr-sm-2"
+            value={destinationInput}
+            onChange={handleDestinationInputChange}
+          />
+        </Col>
+        <Col>
+          <Button variant="outline-info" onClick={handleDestinationSubmit}>
+            Підтвердіть
+          </Button>
+        </Col>
+      </Row>
 
       <GoogleMap
         center={defaultLocation}
         zoom={12}
-        onLoad={(map) => onMapLoad(map)}
-        mapContainerStyle={{ height: "500px", width: "900px" }}
+        mapContainerStyle={{ height: "500px" }}
         onClick={onMapClick}
       >
         {directions !== null && <DirectionsRenderer directions={directions} />}
 
         {markers.map((marker, index) => (
-          <MarkerF
-            key={index}
-            onClick={() => openInfoWindow(marker)}
-            position={marker.position}
-          >
-            {selectedMarker?.id === marker?.id && (
-              <InfoWindowF
-                position={marker.position}
-                onCloseClick={closeInfoWindow}
-              >
-                <p>{marker.info}</p>
-              </InfoWindowF>
-            )}
-          </MarkerF>
+          <Marker
+            selectedMarker={selectedMarker}
+            index={index}
+            openInfoWindow={openInfoWindow}
+            closeInfoWindow={closeInfoWindow}
+            marker={marker}
+          />
         ))}
       </GoogleMap>
     </div>
