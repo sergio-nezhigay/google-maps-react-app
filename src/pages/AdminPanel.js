@@ -9,9 +9,11 @@ import {
   ShowGeoObject,
 } from "../components/MarkerList";
 
+const customLayout = (props) => <layout {...props} appbar={null} />;
+
 const AdminPanel = () => {
   return (
-    <Admin basename="/admin" dataProvider={dataProvider}>
+    <Admin basename="/admin" dataProvider={dataProvider} layout={customLayout}>
       <Resource
         name="geo-object"
         list={GeoObjectList}
