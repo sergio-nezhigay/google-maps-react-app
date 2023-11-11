@@ -100,7 +100,7 @@ const Map = () => {
       <GoogleMap
         center={defaultLocation}
         zoom={12}
-        mapContainerStyle={{ height: "600px" }}
+        mapContainerStyle={{ height: "500px" }}
         onClick={onMapClick}
       >
         {directions !== null && <DirectionsRenderer directions={directions} />}
