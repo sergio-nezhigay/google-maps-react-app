@@ -1,14 +1,17 @@
 {
   "files": {
     "main.css": "/google-maps-react-app/static/css/main.bb89c93c.css",
-    "main.js": "/google-maps-react-app/static/js/main.91d727de.js",
-    "static/media/pin.ico": "/google-maps-react-app/static/media/pin.08a51cbc1a48f7d98b58.ico",
+    "main.js": "/google-maps-react-app/static/js/main.632d5579.js",
+    "static/media/pin2.ico": "/google-maps-react-app/static/media/pin2.08a51cbc1a48f7d98b58.ico",
+    "static/media/pin3.ico": "/google-maps-react-app/static/media/pin3.140ea0aafd89b601b5ca.ico",
+    "static/media/pin4.ico": "/google-maps-react-app/static/media/pin4.30d20f4b7b70a6184352.ico",
+    "static/media/pin5.ico": "/google-maps-react-app/static/media/pin5.2fceed41be37debc33e2.ico",
     "index.html": "/google-maps-react-app/index.html",
     "main.bb89c93c.css.map": "/google-maps-react-app/static/css/main.bb89c93c.css.map",
-    "main.91d727de.js.map": "/google-maps-react-app/static/js/main.91d727de.js.map"
+    "main.632d5579.js.map": "/google-maps-react-app/static/js/main.632d5579.js.map"
   },
   "entrypoints": [
     "static/css/main.bb89c93c.css",
-    "static/js/main.91d727de.js"
+    "static/js/main.632d5579.js"
   ]
 }
