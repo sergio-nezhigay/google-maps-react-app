@@ -4,7 +4,7 @@ import { FormControl, Button, Col, Row } from "react-bootstrap";
 
 import { GoogleMap, DirectionsRenderer } from "@react-google-maps/api";
 
-import useInitMarkers from "../utils/useInitMarkers";
+import useInitMarkers from "../hooks/useInitMarkers";
 import geocodeFromString from "../utils/geocodeFromString";
 import Marker from "./Marker";
 

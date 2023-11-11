@@ -21,6 +21,9 @@ const Header = () => {
               <Nav.Link as={NavLink} to="/login" activeclassname="active">
                 Логін
               </Nav.Link>
+              <Nav.Link as={NavLink} to="/admin" activeclassname="active">
+                Адміністратор
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

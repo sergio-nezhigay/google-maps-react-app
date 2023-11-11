@@ -21,6 +21,9 @@ export default function useInitMarkers() {
           },
           info: item.name,
           description: item.description,
+          type: item.type,
+          accessibilities: item.accessibility,
+          schedule: item.schedule,
         });
       }
     });

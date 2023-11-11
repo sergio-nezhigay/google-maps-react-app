@@ -9,6 +9,17 @@ export default function Marker({
   closeInfoWindow,
   marker,
 }) {
+  const accessibilityBlock = marker.accessibilities?.length ? (
+    <>
+      <p>Зручності:</p>
+      <ul>
+        {marker.accessibilities.map((accessibility, index) => (
+          <li key={index}>{accessibility.label}</li>
+        ))}
+      </ul>
+    </>
+  ) : null;
+
   return (
     <MarkerF
       key={index}
@@ -22,8 +33,11 @@ export default function Marker({
       {selectedMarker?.id === marker?.id && (
         <InfoWindowF position={marker.position} onCloseClick={closeInfoWindow}>
           <>
-            <h4>{marker.info}</h4>
+            <h5>{marker.info}</h5>
             {marker.description && <p>{marker.description}</p>}
+            {marker.type?.label && <p>{marker.type.label}</p>}
+            {marker.schedule?.label && <p>{marker.schedule}</p>}
+            {accessibilityBlock}
           </>
         </InfoWindowF>
       )}
