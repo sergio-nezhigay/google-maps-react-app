@@ -55,11 +55,19 @@ const Map = () => {
     setDestinationInput(event.target.value);
   };
 
-  const handleDestinationSubmit = () => {
-    geocodeFromString(destinationInput).then((coordinates) => {
-      changeDirection(directionsService, origin, coordinates);
-      setSelectedMarker(null);
-    });
+  const handleDestinationSubmit = async () => {
+    try {
+      const newDestination = await geocodeFromString(destinationInput);
+      if (newDestination.lat && newDestination.lng) {
+        directionsService = null;
+        init();
+        setSelectedMarker(null);
+        setDestinationInput("");
+        changeDirection(origin, newDestination);
+      }
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const openInfoWindow = (marker) => {

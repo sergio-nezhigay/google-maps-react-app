@@ -30,13 +30,16 @@ export default function Marker({
 
   switch (marker.type?.name) {
     case "CATERING":
-      icon.url = require("../images/pin3.ico");
+      icon.url = require("../images/cafee.ico");
       break;
     case "INFRASTRUCTURE":
       icon.url = require("../images/pin2.ico");
       break;
     case "SHOP":
       icon.url = require("../images/pin5.ico");
+      break;
+    case "PARK":
+      icon.url = require("../images/park.ico");
       break;
     // додайте додаткові випадки для інших типів, якщо потрібно
     default:
