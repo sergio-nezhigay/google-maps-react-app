@@ -23,15 +23,32 @@ export default function Marker({
     </>
   ) : null;
 
+  const icon = {
+    url: require("../images/pin4.ico"),
+    fillColor: "#EB00FF",
+  };
+
+  switch (marker.type?.name) {
+    case "CATERING":
+      icon.url = require("../images/pin3.ico");
+      break;
+    case "INFRASTRUCTURE":
+      icon.url = require("../images/pin2.ico");
+      break;
+    case "SHOP":
+      icon.url = require("../images/pin5.ico");
+      break;
+    // додайте додаткові випадки для інших типів, якщо потрібно
+    default:
+      break;
+  }
+
   return (
     <MarkerF
       key={index}
       onClick={() => openInfoWindow(marker)}
       position={marker.position}
-      icon={{
-        url: require("../images/pin.ico"),
-        fillColor: "#EB00FF",
-      }}
+      icon={icon}
     >
       {selectedMarker?.id === marker?.id && (
         <InfoWindowF position={marker.position} onCloseClick={closeInfoWindow}>
