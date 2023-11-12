@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 
 import { MarkerF, InfoWindowF } from "@react-google-maps/api";
-import { Modal, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+
+import ModalMessage from "./ModalMessage";
+import chooseIcon from "../utils/chooseIcon";
 
 export default function Marker({
   selectedMarker,
@@ -13,45 +16,7 @@ export default function Marker({
 }) {
   const [reportError, setReportError] = useState(false);
 
-  const icon = {
-    url: require("../images/pin4.ico"),
-    fillColor: "#EB00FF",
-  };
-
-  switch (marker.type?.name) {
-    case "CATERING":
-      icon.url = require("../images/catering.ico");
-      break;
-    case "INFRASTRUCTURE":
-      icon.url = require("../images/infrastructure.ico");
-      break;
-    case "SHOP":
-      icon.url = require("../images/shop.ico");
-      break;
-    case "PARK":
-      icon.url = require("../images/park.ico");
-      break;
-    case "BUILDING":
-      icon.url = require("../images/building.ico");
-      break;
-    case "EDUCATION":
-      icon.url = require("../images/education.ico");
-      break;
-    case "FACILITY":
-      icon.url = require("../images/facility.ico");
-      break;
-    case "MEDICINE":
-      icon.url = require("../images/medicine.ico");
-      break;
-    case "TRANSPORT":
-      icon.url = require("../images/transport.ico");
-      break;
-    case "PLAYGROUND":
-      icon.url = require("../images/playground.ico");
-      break;
-    default:
-      break;
-  }
+  const icon = chooseIcon(marker);
 
   const accessibilityBlock = marker.accessibilities?.length ? (
     <>
@@ -105,23 +70,11 @@ export default function Marker({
                 </Button>
               </div>
             </div>
-            <Modal show={reportError} onHide={() => setReportError(false)}>
-              <Modal.Header closeButton>
-                <Modal.Title>Повідомлення про неточність</Modal.Title>
-              </Modal.Header>
-              <Modal.Body>
-                <p>Повідомлення про неточність було відправлено.</p>
-              </Modal.Body>
-              <Modal.Footer>
-                <Button
-                  variant="secondary"
-                  size="sm"
-                  onClick={() => setReportError(false)}
-                >
-                  Закрити
-                </Button>
-              </Modal.Footer>
-            </Modal>
+            <ModalMessage
+              reportError={reportError}
+              setReportError={setReportError}
+              messageText="Повідомлення про неточність було відправлено."
+            />
           </>
         </InfoWindowF>
       )}

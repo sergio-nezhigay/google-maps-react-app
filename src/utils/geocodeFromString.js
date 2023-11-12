@@ -13,7 +13,6 @@ const geocodeFromString = async (destination) => {
     }
 
     const data = await response.json();
-
     if (data.results && data.results.length > 0) {
       const location = data.results[0].geometry.location;
 
@@ -23,7 +22,6 @@ const geocodeFromString = async (destination) => {
     }
   } catch (error) {
     console.error(error.message);
-
     return { lat: 0, lng: 0 };
   }
 };

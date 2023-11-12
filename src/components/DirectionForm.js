@@ -1,0 +1,80 @@
+import React from "react";
+import { Row, Form, Badge, OverlayTrigger, Tooltip } from "react-bootstrap";
+
+import { locationTypes } from "../utils/constants";
+
+export default function DirectionForm({
+  originType,
+  handleOriginChange,
+  currentLocation,
+  destinationInput,
+  handleDestinationInputChange,
+  handleSubmit,
+  isValidDestination,
+}) {
+  return (
+    <>
+      <Row>
+        <Form onSubmit={handleSubmit}>
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>
+              Введіть місце призначення (або виберіть на карті)
+            </Form.Label>
+            <Form.Control
+              type="text"
+              placeholder=""
+              className="mr-sm-2"
+              value={destinationInput}
+              onChange={handleDestinationInputChange}
+              isInvalid={!isValidDestination}
+            />
+
+            <Form.Control.Feedback type="invalid">
+              Введіть дійсне місце призначення
+            </Form.Control.Feedback>
+          </Form.Group>
+        </Form>
+      </Row>
+      <Row>
+        <Form.Group>
+          <Form.Label>Пункт відправлення</Form.Label>
+          <Form.Check
+            type="radio"
+            label="майдан Незалежності"
+            value={locationTypes.DEFAULT_LOCATION}
+            checked={originType === locationTypes.DEFAULT_LOCATION}
+            onChange={handleOriginChange}
+          />
+
+          {/* <Form.Check
+        type="radio"
+        label="Click on Map"
+        value={locationTypes.CLICK_LOCATION}
+        checked={originType === locationTypes.CLICK_LOCATION}
+        onChange={handleOriginChange}
+      /> */}
+          <Form.Check
+            type="radio"
+            label={
+              <span>
+                Моє місце розташування
+                {!currentLocation && (
+                  <OverlayTrigger
+                    placement="top"
+                    overlay={<Tooltip>Потрібен дозвіл з браузеру</Tooltip>}
+                  >
+                    <Badge bg="secondary">i</Badge>
+                  </OverlayTrigger>
+                )}
+              </span>
+            }
+            value={locationTypes.BROWSER_LOCATION}
+            checked={originType === locationTypes.BROWSER_LOCATION}
+            onChange={handleOriginChange}
+            disabled={!currentLocation}
+          />
+        </Form.Group>
+      </Row>
+    </>
+  );
+}

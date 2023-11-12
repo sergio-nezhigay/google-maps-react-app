@@ -8,12 +8,9 @@ export const key = "AIzaSyD5sgxYjVndnPUYM4qwwX1yBRhtAaLPZaQ";
 
 function Home() {
   return (
-    <Container>
-      {/* <Container className="mt-3"> */}
-      <LoadScript googleMapsApiKey={key} libraries={lib}>
-        <Map />
-      </LoadScript>
-    </Container>
+    <LoadScript googleMapsApiKey={key} libraries={lib}>
+      <Map />
+    </LoadScript>
   );
 }
 

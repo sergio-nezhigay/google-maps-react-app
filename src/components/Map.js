@@ -1,71 +1,106 @@
 /*global google*/
-import React, { useState } from "react";
-import { FormControl, Button, Col, Row } from "react-bootstrap";
-
+import React, { useEffect, useState } from "react";
+import { Col, Row, Container } from "react-bootstrap";
 import { GoogleMap, DirectionsRenderer } from "@react-google-maps/api";
 
-import useInitMarkers from "../hooks/useInitMarkers";
-import geocodeFromString from "../utils/geocodeFromString";
+import DirectionForm from "./DirectionForm";
 import Marker from "./Marker";
+import useCurrentLocation from "../hooks/useCurrentLocation";
+import useInitMarkers from "../hooks/useInitMarkers";
+import { locationTypes } from "../utils/constants";
+import geocodeFromString from "../utils/geocodeFromString";
+import isInKyiv from "../utils/isInKyiv";
 
 const defaultLocation = { lat: 50.4501, lng: 30.5234 };
-let origin = { lat: 50.4501, lng: 30.5234 };
 
 let directionsService;
-let directionsDisplay;
+// let directionsDisplay;
 
-const Map = () => {
+function Map() {
+  const [isValidDestination, setIsValidDestination] = useState(true);
+  const [originType, setOriginType] = useState(locationTypes.BROWSER_LOCATION);
+  const [origin, setOrigin] = useState(null);
+  const [destination, setDestination] = useState(null);
+  const currentLocation = useCurrentLocation();
+
   const [directions, setDirections] = useState(null);
   const [selectedMarker, setSelectedMarker] = useState(null);
   const [destinationInput, setDestinationInput] = useState("");
   const markers = useInitMarkers();
 
-  function init() {
-    directionsService = new window.google.maps.DirectionsService();
-  }
-
-  init();
-
-  const changeDirection = (origin, destination) => {
-    directionsService.route(
-      {
-        origin: origin,
-        destination: destination,
-        travelMode: window.google.maps.TravelMode.WALKING,
-      },
-      (result, status) => {
-        if (status === window.google.maps.DirectionsStatus.OK) {
-          setDirections(result);
-        } else {
-          console.error(`Error fetching directions ${result}`);
-        }
-      }
-    );
+  const handleOriginChange = (event) => {
+    setOriginType(event.target.value);
   };
+
+  useEffect(() => {
+    directionsService = new window.google.maps.DirectionsService();
+  }, []);
+
+  useEffect(() => {
+    if (originType === locationTypes.DEFAULT_LOCATION)
+      setOrigin(defaultLocation);
+    if (originType === locationTypes.BROWSER_LOCATION) {
+      if (currentLocation) setOrigin(currentLocation);
+      else {
+        setOriginType(locationTypes.DEFAULT_LOCATION);
+        setOrigin(defaultLocation);
+      }
+    }
+  }, [originType, currentLocation]);
+
+  useEffect(() => {
+    const changeDirection = (origin, destination) => {
+      if (origin && destination) {
+        directionsService.route(
+          {
+            origin: origin,
+            destination: destination,
+            travelMode: window.google.maps.TravelMode.WALKING,
+          },
+          (result, status) => {
+            if (status === window.google.maps.DirectionsStatus.OK) {
+              setDirections(result);
+            } else {
+              console.error(`Error fetching directions ${result}`);
+            }
+          }
+        );
+      }
+    };
+    changeDirection(origin, destination);
+  }, [origin, destination]);
 
   const onMapClick = (e) => {
     directionsService = null;
-    init();
+    directionsService = new window.google.maps.DirectionsService();
     const newDestination = { lat: e.latLng.lat(), lng: e.latLng.lng() };
+    setDestination(newDestination);
     setDestinationInput("");
-    changeDirection(origin, newDestination);
   };
 
   const handleDestinationInputChange = (event) => {
     setDestinationInput(event.target.value);
+    setIsValidDestination(true);
   };
 
-  const handleDestinationSubmit = async () => {
+  const handleDestinationSubmit = async (e) => {
+    e.preventDefault();
     try {
       const newDestination = await geocodeFromString(destinationInput);
-      if (newDestination.lat && newDestination.lng) {
+      if (
+        newDestination.lat &&
+        newDestination.lng &&
+        isInKyiv(newDestination.lat, newDestination.lng)
+      ) {
         directionsService = null;
-        init();
+        directionsService = new window.google.maps.DirectionsService();
         setSelectedMarker(null);
-        setDestinationInput("");
-        changeDirection(origin, newDestination);
+        setDestination(newDestination);
+      } else {
+        setIsValidDestination(false);
       }
     } catch (error) {
+      setIsValidDestination(false);
       console.error(error);
     }
   };
@@ -79,45 +114,45 @@ const Map = () => {
   };
 
   return (
-    <div>
-      <Row className="mb-2 mx-auto">
-        <Col>
-          <FormControl
-            type="text"
-            placeholder="Введіть місце призначення "
-            className="mr-sm-2"
-            value={destinationInput}
-            onChange={handleDestinationInputChange}
-          />
+    <Container fluid>
+      <Row style={{ position: "relative", height: "calc(100vh - 130px" }}>
+        <Col md={8}>
+          <GoogleMap
+            center={origin}
+            zoom={12}
+            mapContainerStyle={{ height: "100%" }}
+            onClick={onMapClick}
+          >
+            {directions !== null && (
+              <DirectionsRenderer directions={directions} />
+            )}
+
+            {markers.map((marker, index) => (
+              <Marker
+                key={index}
+                selectedMarker={selectedMarker}
+                index={index}
+                openInfoWindow={openInfoWindow}
+                closeInfoWindow={closeInfoWindow}
+                marker={marker}
+              />
+            ))}
+          </GoogleMap>
         </Col>
-        <Col>
-          <Button variant="outline-info" onClick={handleDestinationSubmit}>
-            Підтвердіть
-          </Button>
+        <Col md={4}>
+          <DirectionForm
+            originType={originType}
+            handleOriginChange={handleOriginChange}
+            currentLocation={currentLocation}
+            destinationInput={destinationInput}
+            handleDestinationInputChange={handleDestinationInputChange}
+            handleSubmit={handleDestinationSubmit}
+            isValidDestination={isValidDestination}
+          />
         </Col>
       </Row>
-
-      <GoogleMap
-        center={defaultLocation}
-        zoom={12}
-        mapContainerStyle={{ height: "500px" }}
-        onClick={onMapClick}
-      >
-        {directions !== null && <DirectionsRenderer directions={directions} />}
-
-        {markers.map((marker, index) => (
-          <Marker
-            key={index}
-            selectedMarker={selectedMarker}
-            index={index}
-            openInfoWindow={openInfoWindow}
-            closeInfoWindow={closeInfoWindow}
-            marker={marker}
-          />
-        ))}
-      </GoogleMap>
-    </div>
+    </Container>
   );
-};
+}
 
 export default Map;
