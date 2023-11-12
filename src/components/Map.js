@@ -114,44 +114,40 @@ function Map() {
   };
 
   return (
-    <Container fluid>
-      <Row style={{ position: "relative", height: "calc(100vh - 130px" }}>
-        <Col md={8}>
-          <GoogleMap
-            center={origin}
-            zoom={12}
-            mapContainerStyle={{ height: "100%" }}
-            onClick={onMapClick}
-          >
-            {directions !== null && (
-              <DirectionsRenderer directions={directions} />
-            )}
+    <>
+      <DirectionForm
+        originType={originType}
+        handleOriginChange={handleOriginChange}
+        currentLocation={currentLocation}
+        destinationInput={destinationInput}
+        handleDestinationInputChange={handleDestinationInputChange}
+        handleSubmit={handleDestinationSubmit}
+        isValidDestination={isValidDestination}
+      />
+      <Row style={{ position: "relative", height: "calc(100vh - 230px" }}>
+        <GoogleMap
+          center={origin}
+          zoom={12}
+          mapContainerStyle={{ height: "100%" }}
+          onClick={onMapClick}
+        >
+          {directions !== null && (
+            <DirectionsRenderer directions={directions} />
+          )}
 
-            {markers.map((marker, index) => (
-              <Marker
-                key={index}
-                selectedMarker={selectedMarker}
-                index={index}
-                openInfoWindow={openInfoWindow}
-                closeInfoWindow={closeInfoWindow}
-                marker={marker}
-              />
-            ))}
-          </GoogleMap>
-        </Col>
-        <Col md={4}>
-          <DirectionForm
-            originType={originType}
-            handleOriginChange={handleOriginChange}
-            currentLocation={currentLocation}
-            destinationInput={destinationInput}
-            handleDestinationInputChange={handleDestinationInputChange}
-            handleSubmit={handleDestinationSubmit}
-            isValidDestination={isValidDestination}
-          />
-        </Col>
+          {markers.map((marker, index) => (
+            <Marker
+              key={index}
+              selectedMarker={selectedMarker}
+              index={index}
+              openInfoWindow={openInfoWindow}
+              closeInfoWindow={closeInfoWindow}
+              marker={marker}
+            />
+          ))}
+        </GoogleMap>
       </Row>
-    </Container>
+    </>
   );
 }
 
