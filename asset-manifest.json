@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/google-maps-react-app/static/css/main.27cbf31b.css",
-    "main.js": "/google-maps-react-app/static/js/main.0efcc140.js",
+    "main.js": "/google-maps-react-app/static/js/main.6b2e3cad.js",
     "static/media/building.ico": "/google-maps-react-app/static/media/building.ed8df9e53ca979f94eeb.ico",
     "static/media/catering.ico": "/google-maps-react-app/static/media/catering.c089ac977dc7f7562a38.ico",
     "static/media/education.ico": "/google-maps-react-app/static/media/education.295000a7e0c4c5b6e4b2.ico",
@@ -9,16 +9,15 @@
     "static/media/infrastructure.ico": "/google-maps-react-app/static/media/infrastructure.a7bc5137694d8d500637.ico",
     "static/media/medicine.ico": "/google-maps-react-app/static/media/medicine.ed3cbef30591523be21d.ico",
     "static/media/park.ico": "/google-maps-react-app/static/media/park.cbe2ad287b477c427fbb.ico",
-    "static/media/pin4.ico": "/google-maps-react-app/static/media/pin4.30d20f4b7b70a6184352.ico",
     "static/media/playground.ico": "/google-maps-react-app/static/media/playground.4cde51e96e1f9f46878f.ico",
     "static/media/shop.ico": "/google-maps-react-app/static/media/shop.3e36614c0f577abd7a9d.ico",
     "static/media/transport.ico": "/google-maps-react-app/static/media/transport.151f7ca6bd8329077529.ico",
     "index.html": "/google-maps-react-app/index.html",
     "main.27cbf31b.css.map": "/google-maps-react-app/static/css/main.27cbf31b.css.map",
-    "main.0efcc140.js.map": "/google-maps-react-app/static/js/main.0efcc140.js.map"
+    "main.6b2e3cad.js.map": "/google-maps-react-app/static/js/main.6b2e3cad.js.map"
   },
   "entrypoints": [
     "static/css/main.27cbf31b.css",
-    "static/js/main.0efcc140.js"
+    "static/js/main.6b2e3cad.js"
   ]
 }
