@@ -9,6 +9,7 @@ import useCurrentLocation from "../hooks/useCurrentLocation";
 import useInitMarkers from "../hooks/useInitMarkers";
 import { locationTypes } from "../utils/constants";
 import geocodeFromString from "../utils/geocodeFromString";
+import { calculateDistance } from "../utils/filterPoints";
 import isInKyiv from "../utils/isInKyiv";
 import filterPoints from "../utils/filterPoints";
 
@@ -81,7 +82,7 @@ function Map() {
       }
     };
     changeDirection(origin, destination);
-  }, [origin, destination, pointsArray]);
+  }, [origin, destination]);
 
   const onMapClick = (e) => {
     directionsService = null;
