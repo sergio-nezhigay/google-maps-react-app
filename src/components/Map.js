@@ -1,6 +1,6 @@
 /*global google*/
 import React, { useEffect, useState } from "react";
-import { Col, Row, Container } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import { GoogleMap, DirectionsRenderer } from "@react-google-maps/api";
 
 import DirectionForm from "./DirectionForm";
@@ -10,6 +10,7 @@ import useInitMarkers from "../hooks/useInitMarkers";
 import { locationTypes } from "../utils/constants";
 import geocodeFromString from "../utils/geocodeFromString";
 import isInKyiv from "../utils/isInKyiv";
+import filterPoints from "../utils/filterPoints";
 
 const defaultLocation = { lat: 50.4501, lng: 30.5234 };
 
@@ -27,6 +28,7 @@ function Map() {
   const [selectedMarker, setSelectedMarker] = useState(null);
   const [destinationInput, setDestinationInput] = useState("");
   const markers = useInitMarkers();
+  const pointsArray = markers.map(({ position }) => position);
 
   const handleOriginChange = (event) => {
     setOriginType(event.target.value);
@@ -50,11 +52,22 @@ function Map() {
 
   useEffect(() => {
     const changeDirection = (origin, destination) => {
+      const waypoints = filterPoints(origin, destination, pointsArray, 0.4)
+        .map((point) => {
+          return {
+            location: point,
+            stopover: true,
+          };
+        })
+        .slice(0, 10);
+
       if (origin && destination) {
         directionsService.route(
           {
             origin: origin,
             destination: destination,
+            waypoints,
+            optimizeWaypoints: true,
             travelMode: window.google.maps.TravelMode.WALKING,
           },
           (result, status) => {
@@ -68,7 +81,7 @@ function Map() {
       }
     };
     changeDirection(origin, destination);
-  }, [origin, destination]);
+  }, [origin, destination, pointsArray]);
 
   const onMapClick = (e) => {
     directionsService = null;

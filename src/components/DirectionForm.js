@@ -59,7 +59,7 @@ export default function DirectionForm({
               type="radio"
               label={
                 <span>
-                  Моє місце розташування
+                  моє місцезнаходження
                   {!currentLocation && (
                     <OverlayTrigger
                       placement="top"
