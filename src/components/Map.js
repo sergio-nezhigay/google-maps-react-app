@@ -14,6 +14,7 @@ import isInKyiv from "../utils/isInKyiv";
 import filterPoints from "../utils/filterPoints";
 
 const defaultLocation = { lat: 50.4501, lng: 30.5234 };
+const MAXDISTANCE = 300; //meters
 
 let directionsService;
 // let directionsDisplay;
@@ -23,7 +24,7 @@ function Map() {
   const [originType, setOriginType] = useState(locationTypes.BROWSER_LOCATION);
   const [origin, setOrigin] = useState(null);
   const [destination, setDestination] = useState(null);
-  const [isWaypointsActive, setIsWaypointsActive] = useState(false);
+  const [isWaypointsActive, setIsWaypointsActive] = useState(true);
   const currentLocation = useCurrentLocation();
 
   const [directions, setDirections] = useState(null);
@@ -63,21 +64,20 @@ function Map() {
 
   useEffect(() => {
     if (origin && destination) {
-      const waypoints = filterPoints(origin, destination, points, 0.4)
+      const waypoints = filterPoints(origin, destination, points, MAXDISTANCE)
         .map((point) => {
           return {
             location: point,
             stopover: true,
           };
         })
-        .slice(0, 10);
-
+        .slice(0, 23);
       directionsService.route(
         {
           origin: origin,
           destination: destination,
           waypoints: isWaypointsActive ? waypoints : null,
-          // optimizeWaypoints: true,
+          optimizeWaypoints: true,
           travelMode: window.google.maps.TravelMode.WALKING,
         },
         (result, status) => {

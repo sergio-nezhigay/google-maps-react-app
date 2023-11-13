@@ -38,7 +38,7 @@ export default function useInitMarkers() {
               return null;
             }
           })
-          .filter(Boolean); 
+          .filter(Boolean);
 
         setMarkers(places);
       } catch (error) {
@@ -51,5 +51,3 @@ export default function useInitMarkers() {
 
   return markers;
 }
-
-
