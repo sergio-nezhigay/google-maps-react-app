@@ -1,5 +1,5 @@
 /*global google*/
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { Row } from "react-bootstrap";
 import { GoogleMap, DirectionsRenderer } from "@react-google-maps/api";
 
@@ -23,16 +23,26 @@ function Map() {
   const [originType, setOriginType] = useState(locationTypes.BROWSER_LOCATION);
   const [origin, setOrigin] = useState(null);
   const [destination, setDestination] = useState(null);
+  const [isWaypointsActive, setIsWaypointsActive] = useState(false);
   const currentLocation = useCurrentLocation();
 
   const [directions, setDirections] = useState(null);
   const [selectedMarker, setSelectedMarker] = useState(null);
   const [destinationInput, setDestinationInput] = useState("");
+
   const markers = useInitMarkers();
-  const pointsArray = markers.map(({ position }) => position);
+
+  const pointsArray = useMemo(
+    () => markers.map(({ position }) => position),
+    [markers]
+  );
 
   const handleOriginChange = (event) => {
     setOriginType(event.target.value);
+  };
+
+  const toggleWaypointCheck = () => {
+    setIsWaypointsActive(!isWaypointsActive);
   };
 
   useEffect(() => {
@@ -67,7 +77,7 @@ function Map() {
           {
             origin: origin,
             destination: destination,
-            waypoints,
+            waypoints: isWaypointsActive ? waypoints : null,
             optimizeWaypoints: true,
             travelMode: window.google.maps.TravelMode.WALKING,
           },
@@ -82,7 +92,7 @@ function Map() {
       }
     };
     changeDirection(origin, destination);
-  }, [origin, destination]);
+  }, [origin, destination, isWaypointsActive]);
 
   const onMapClick = (e) => {
     directionsService = null;
@@ -137,6 +147,8 @@ function Map() {
         handleDestinationInputChange={handleDestinationInputChange}
         handleSubmit={handleDestinationSubmit}
         isValidDestination={isValidDestination}
+        toggleWaypointCheck={toggleWaypointCheck}
+        isWaypointsActive={isWaypointsActive}
       />
       <Row style={{ position: "relative", height: "calc(100vh - 230px" }}>
         <GoogleMap

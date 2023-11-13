@@ -18,10 +18,12 @@ export default function DirectionForm({
   handleDestinationInputChange,
   handleSubmit,
   isValidDestination,
+  isWaypointsActive,
+  toggleWaypointCheck,
 }) {
   return (
     <>
-      <Row>
+      <Row className="align-items-start">
         <Col>
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -76,6 +78,17 @@ export default function DirectionForm({
               disabled={!currentLocation}
             />
           </Form.Group>
+        </Col>
+        <Col>
+          <strong>
+            <Form.Check
+              type="switch"
+              id="custom-switch"
+              label="Враховувати бордюри"
+              onChange={toggleWaypointCheck}
+              checked={isWaypointsActive}
+            />
+          </strong>
         </Col>
       </Row>
       <Row></Row>
