@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/google-maps-react-app/static/css/main.27cbf31b.css",
-    "main.js": "/google-maps-react-app/static/js/main.2d18c20a.js",
-    "static/media/building.ico": "/google-maps-react-app/static/media/building.ed8df9e53ca979f94eeb.ico",
-    "static/media/catering.ico": "/google-maps-react-app/static/media/catering.c089ac977dc7f7562a38.ico",
-    "static/media/education.ico": "/google-maps-react-app/static/media/education.295000a7e0c4c5b6e4b2.ico",
-    "static/media/facility.ico": "/google-maps-react-app/static/media/facility.8bbd5b19f899ebc3f5d5.ico",
-    "static/media/infrastructure.ico": "/google-maps-react-app/static/media/infrastructure.a7bc5137694d8d500637.ico",
-    "static/media/medicine.ico": "/google-maps-react-app/static/media/medicine.ed3cbef30591523be21d.ico",
-    "static/media/park.ico": "/google-maps-react-app/static/media/park.cbe2ad287b477c427fbb.ico",
-    "static/media/playground.ico": "/google-maps-react-app/static/media/playground.4cde51e96e1f9f46878f.ico",
-    "static/media/shop.ico": "/google-maps-react-app/static/media/shop.3e36614c0f577abd7a9d.ico",
-    "static/media/transport.ico": "/google-maps-react-app/static/media/transport.151f7ca6bd8329077529.ico",
+    "main.js": "/google-maps-react-app/static/js/main.aa971b81.js",
+    "static/media/building.ico": "/google-maps-react-app/static/media/building.cc71f8c58f8dd4046be8.ico",
+    "static/media/catering.ico": "/google-maps-react-app/static/media/catering.3d9600a0dcb583d58876.ico",
+    "static/media/education.ico": "/google-maps-react-app/static/media/education.4d4bdf59a45741e4162c.ico",
+    "static/media/facility.ico": "/google-maps-react-app/static/media/facility.4a70b569bde4b8e43506.ico",
+    "static/media/infrastructure.ico": "/google-maps-react-app/static/media/infrastructure.49b3945818356b1d98a7.ico",
+    "static/media/medicine.ico": "/google-maps-react-app/static/media/medicine.4456af7ee0a004490cd2.ico",
+    "static/media/park.ico": "/google-maps-react-app/static/media/park.87cbbfa6656ed2436229.ico",
+    "static/media/playground.ico": "/google-maps-react-app/static/media/playground.05d2422e0bb96bd979d6.ico",
+    "static/media/shop.ico": "/google-maps-react-app/static/media/shop.07fde7d127b5db2e6865.ico",
+    "static/media/transport.ico": "/google-maps-react-app/static/media/transport.beb28ba724009c192dd7.ico",
     "index.html": "/google-maps-react-app/index.html",
     "main.27cbf31b.css.map": "/google-maps-react-app/static/css/main.27cbf31b.css.map",
-    "main.2d18c20a.js.map": "/google-maps-react-app/static/js/main.2d18c20a.js.map"
+    "main.aa971b81.js.map": "/google-maps-react-app/static/js/main.aa971b81.js.map"
   },
   "entrypoints": [
     "static/css/main.27cbf31b.css",
-    "static/js/main.2d18c20a.js"
+    "static/js/main.aa971b81.js"
   ]
 }
