@@ -9,7 +9,7 @@ import useCurrentLocation from "../hooks/useCurrentLocation";
 import useInitMarkers from "../hooks/useInitMarkers";
 import { locationTypes } from "../utils/constants";
 import geocodeFromString from "../utils/geocodeFromString";
-import { calculateDistance } from "../utils/filterPoints";
+
 import isInKyiv from "../utils/isInKyiv";
 import filterPoints from "../utils/filterPoints";
 
@@ -32,7 +32,7 @@ function Map() {
 
   const markers = useInitMarkers();
 
-  const pointsArray = useMemo(
+  const points = useMemo(
     () => markers.map(({ position }) => position),
     [markers]
   );
@@ -62,8 +62,8 @@ function Map() {
   }, [originType, currentLocation]);
 
   useEffect(() => {
-    const changeDirection = (origin, destination) => {
-      const waypoints = filterPoints(origin, destination, pointsArray, 0.4)
+    if (origin && destination) {
+      const waypoints = filterPoints(origin, destination, points, 0.4)
         .map((point) => {
           return {
             location: point,
@@ -72,27 +72,24 @@ function Map() {
         })
         .slice(0, 10);
 
-      if (origin && destination) {
-        directionsService.route(
-          {
-            origin: origin,
-            destination: destination,
-            waypoints: isWaypointsActive ? waypoints : null,
-            optimizeWaypoints: true,
-            travelMode: window.google.maps.TravelMode.WALKING,
-          },
-          (result, status) => {
-            if (status === window.google.maps.DirectionsStatus.OK) {
-              setDirections(result);
-            } else {
-              console.error(`Error fetching directions ${result}`);
-            }
+      directionsService.route(
+        {
+          origin: origin,
+          destination: destination,
+          waypoints: isWaypointsActive ? waypoints : null,
+          // optimizeWaypoints: true,
+          travelMode: window.google.maps.TravelMode.WALKING,
+        },
+        (result, status) => {
+          if (status === window.google.maps.DirectionsStatus.OK) {
+            setDirections(result);
+          } else {
+            console.error(`Error fetching directions ${result}`);
           }
-        );
-      }
-    };
-    changeDirection(origin, destination);
-  }, [origin, destination, isWaypointsActive]);
+        }
+      );
+    }
+  }, [origin, destination, isWaypointsActive, points]);
 
   const onMapClick = (e) => {
     directionsService = null;
