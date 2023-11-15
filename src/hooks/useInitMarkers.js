@@ -1,20 +1,14 @@
 import { useEffect, useState } from "react";
 
+import geoObjectAPI from "../utils/geoObjectAPI";
+
 export default function useInitMarkers() {
   const [markers, setMarkers] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          "https://iewdkvrp3d.eu-central-1.awsapprunner.com/api/v1/map/geo-object"
-        );
-        if (!response.ok) {
-          throw new Error("Failed to fetch data");
-        }
-
-        const data = await response.json();
-
+        const { data } = await geoObjectAPI.readlist();
         const places = data
           .map((item, index) => {
             if (
@@ -23,7 +17,7 @@ export default function useInitMarkers() {
               item.coordinates.longitude
             ) {
               return {
-                id: index,
+                id: item.id,
                 position: {
                   lat: +item.coordinates.latitude,
                   lng: +item.coordinates.longitude,

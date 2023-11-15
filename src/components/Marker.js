@@ -4,7 +4,7 @@ import { MarkerF, InfoWindowF } from "@react-google-maps/api";
 import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import ModalMessage from "./ModalMessage";
+import ErrorModal from "./ErrorModal";
 import chooseIcon from "../utils/chooseIcon";
 
 export default function Marker({
@@ -14,7 +14,7 @@ export default function Marker({
   closeInfoWindow,
   marker,
 }) {
-  const [reportError, setReportError] = useState(false);
+  const [isErrorModalActive, setIsErrorModalActive] = useState(false);
 
   const icon = chooseIcon(marker);
 
@@ -32,7 +32,7 @@ export default function Marker({
   ) : null;
 
   const handleReportError = () => {
-    setReportError(true);
+    setIsErrorModalActive(true);
   };
 
   return (
@@ -70,10 +70,10 @@ export default function Marker({
                 </Button>
               </div>
             </div>
-            <ModalMessage
-              reportError={reportError}
-              setReportError={setReportError}
-              messageText="Повідомлення про неточність було відправлено."
+            <ErrorModal
+              isErrorModalActive={isErrorModalActive}
+              setIsErrorModalActive={setIsErrorModalActive}
+              id={marker.id}
             />
           </>
         </InfoWindowF>
