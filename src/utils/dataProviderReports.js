@@ -19,6 +19,7 @@ const dataProvider = {
     );
     const data = await response.json();
     data.id = data.reportId
+    console.log(data)
     return { data };
   },
   delete: async (resource, params) => {
