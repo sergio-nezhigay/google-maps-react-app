@@ -10,11 +10,11 @@ import {
 } from "../components/MarkerList";
 import { ReportList,ShowReport } from '../components/ReportList';
 
-//const customLayout = (props) => <layout {...props} appbar={null} />;
+const CustomLayout = (props) => <layout {...props} appbar={null} />;
 
 const AdminPanel = () => {
   return (
-    <Admin basename="/admin" dataProvider={dataProvider}>
+    <Admin basename="/admin" dataProvider={dataProvider} layout={CustomLayout}>
       <Resource
         name="geo-object"
         list={GeoObjectList}
