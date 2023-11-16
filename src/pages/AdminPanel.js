@@ -1,20 +1,30 @@
 import React from "react";
 
 import { Admin, Resource } from "react-admin";
+
 import dataProvider from "../utils/dataProvider";
+import { Layout } from "react-admin";
+
 import {
   GeoObjectCreate,
   GeoObjectList,
   ShowGeoObject,
   GeoObjectEdit,
 } from "../components/MarkerList";
-import { ReportList,ShowReport } from '../components/ReportList';
+import { ReportList, ShowReport } from "../components/ReportList";
 
-const CustomLayout = (props) => <layout {...props} appbar={null} />;
+const MyLayout = (props) => (
+  <Layout
+    {...props}
+    sx={{
+      "& header": { visibility: "hidden" },
+    }}
+  />
+);
 
 const AdminPanel = () => {
   return (
-    <Admin basename="/admin" dataProvider={dataProvider} layout={CustomLayout}>
+    <Admin basename="/admin" dataProvider={dataProvider} layout={MyLayout}>
       <Resource
         name="geo-object"
         list={GeoObjectList}
@@ -22,7 +32,9 @@ const AdminPanel = () => {
         edit={GeoObjectEdit}
         create={GeoObjectCreate}
       />
-       <Resource name="reports"  list={ReportList} show={ShowReport} >   </Resource>
+      <Resource name="reports" list={ReportList} show={ShowReport}>
+        {" "}
+      </Resource>
     </Admin>
   );
 };
