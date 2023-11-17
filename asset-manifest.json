@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/google-maps-react-app/static/css/main.27cbf31b.css",
-    "main.js": "/google-maps-react-app/static/js/main.f3a7226a.js",
+    "main.css": "/google-maps-react-app/static/css/main.d2a303f9.css",
+    "main.js": "/google-maps-react-app/static/js/main.be430869.js",
     "static/media/building.ico": "/google-maps-react-app/static/media/building.cc71f8c58f8dd4046be8.ico",
     "static/media/catering.ico": "/google-maps-react-app/static/media/catering.3d9600a0dcb583d58876.ico",
     "static/media/education.ico": "/google-maps-react-app/static/media/education.4d4bdf59a45741e4162c.ico",
@@ -13,11 +13,11 @@
     "static/media/shop.ico": "/google-maps-react-app/static/media/shop.07fde7d127b5db2e6865.ico",
     "static/media/transport.ico": "/google-maps-react-app/static/media/transport.beb28ba724009c192dd7.ico",
     "index.html": "/google-maps-react-app/index.html",
-    "main.27cbf31b.css.map": "/google-maps-react-app/static/css/main.27cbf31b.css.map",
-    "main.f3a7226a.js.map": "/google-maps-react-app/static/js/main.f3a7226a.js.map"
+    "main.d2a303f9.css.map": "/google-maps-react-app/static/css/main.d2a303f9.css.map",
+    "main.be430869.js.map": "/google-maps-react-app/static/js/main.be430869.js.map"
   },
   "entrypoints": [
-    "static/css/main.27cbf31b.css",
-    "static/js/main.f3a7226a.js"
+    "static/css/main.d2a303f9.css",
+    "static/js/main.be430869.js"
   ]
 }
